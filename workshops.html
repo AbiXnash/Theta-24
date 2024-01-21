@@ -13,6 +13,64 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
       <title>Theta 2k24 | Workshops</title>
+      <style>
+
+        .card-container {
+            margin-top: 100px;
+            text-align: center;
+            /* margin: 50px; */
+        }
+
+        .tabs {
+            display: flex;
+            list-style: none;
+            padding: 10px 0; /* Adjusted padding */
+            justify-content: center;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-right: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tab.active {
+            background-color: #ddd;
+        }
+
+        .events-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center; 
+        }
+
+        .event-card {
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left; 
+        }
+
+        .register-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
    </head>
    <body>
       <!--=============== HEADER ===============-->
@@ -72,7 +130,95 @@
         </nav>
      </header>
 
-     
+     <section class="card-container">
+        <ul class="tabs">
+            <li class="tab" onclick="showEvents(1)">Day 1</li>
+            <li class="tab" onclick="showEvents(2)">Day 2</li>
+            <li class="tab" onclick="showEvents(3)">Day 3</li>
+        </ul>
+    
+        <div class="events-container" id="events-container">
+            <!-- Events will be dynamically added here based on the selected day -->
+        </div>
+    
+        <script>
+            // Sample data for events (replace this with your actual data)
+            const eventData = {
+                1: [
+                    { date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },
+                    { date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },{ date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },{ date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },{ date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },{ date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },{ date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },{ date: '2024-01-21', title: 'Event 1', note: 'Description of Event 1' },
+                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2' },
+                ],
+                2: [
+                    { date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },
+                    { date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },{ date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },{ date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },{ date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },{ date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },{ date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },{ date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'Event 4', note: 'Description of Event 4' },
+                ],
+                3: [
+                    { date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },
+                    { date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },{ date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 6', note: 'Description of Event 6' },
+                ],
+            };
+    
+            function showEvents(day) {
+                const eventsContainer = document.getElementById('events-container');
+                const events = eventData[day];
+    
+                if (!events) {
+                    return;
+                }
+    
+                // Clear existing events
+                eventsContainer.innerHTML = '';
+    
+                // Display events for the selected day
+                events.forEach(event => {
+                    const card = document.createElement('div');
+                    card.classList.add('event-card');
+                    card.innerHTML = `
+                        <p>Date: ${event.date}</p>
+                        <p>Title: ${event.title}</p>
+                        <p>Note: ${event.note}</p>
+                        <a href="#" class="register-button">Register</a>
+                    `;
+                    eventsContainer.appendChild(card);
+                });
+    
+                // Update active tab
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                tabs[day - 1].classList.add('active');
+            }
+    
+            // Show events for the default day (e.g., Day 1)
+            showEvents(1);
+        </script>
+     </section>
 
       <footer >
         <div class="footer-content">
