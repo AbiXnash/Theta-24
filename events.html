@@ -70,28 +70,90 @@
         </nav>
      </header>
 
-      <section class="container" style="height: 65vh;">
-         <h1 class="theta1">
-            Work on Progress
-         </h1>
-      </section>
+     <section class="card-container">
+        <ul class="tabs">
+            <li class="tab" onclick="showEvents('all')">All</li>
+            <li class="tab" onclick="showEvents(1)">Day 1</li>
+            <li class="tab" onclick="showEvents(2)">Day 2</li>
+            <li class="tab" onclick="showEvents(3)">Day 3</li>
+        </ul>
+    
+        <div class="events-container" id="events-container">
+            <!-- Events will be dynamically added here based on the selected day -->
+        </div>
+    
+        <script>
+            const eventData = {
+                1: [
+                    { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
+                    { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
+
+                ],
+                2: [
+                    { date: '2024-01-22', title: 'ssssss', note: 'lorem sdf df sdg we her twsdsdf afda adasdsad sdsdfsdf wqe d s rq sd fd fe fsd fsdfdsfsd fsdfds fsdf sdf'},
+
+                ],
+                3: [
+                    { date: '2024-01-23', title: 'Event 5'},
+            ],
+            };
+    
+            function showEvents(day) {
+                const eventsContainer = document.getElementById('events-container');
+                const tabs = document.querySelectorAll('.tab');
+
+                tabs.forEach(tab => tab.classList.remove('active'));
+                
+                if (day === 'all') {
+                    const allEvents = Object.values(eventData).flat();
+                    displayEvents(allEvents);
+                    tabs[0].classList.add('active'); 
+                } else {
+                    const events = eventData[day];
+                    displayEvents(events);
+                    tabs[day].classList.add('active');
+                }
+            }
+
+    function displayEvents(events) {
+        const eventsContainer = document.getElementById('events-container');
+        eventsContainer.innerHTML = '';
+
+        events.forEach(event => {
+            const card = document.createElement('div');
+            card.classList.add('event-card');
+            card.innerHTML = `
+                <h2>${event.title}</h2>
+                <div>
+                    <p class="date">${event.date}</p>
+                    <p class="description">${event.note}</p>
+                </div>
+                <a href="${event.link}" class="register-button">Register</a>
+            `;
+            eventsContainer.appendChild(card);
+        });
+    }
+
+            showEvents('all');
+        </script>
+     </section>
 
       <footer >
-        <div class="footer-content">
-          <a href="index.html" class="nav__logo">
-            <i class="ri-planet-line"></i> Theta 2k24
-          </a>
-          <h2 class="dates"> March 29 - March 31, 2024 </h2>
-            <ul class="socials">
-                <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2024. Designed by <span>ABX</span></p>
-        </div>
-    </footer>
+         <div class="footer-content">
+           <a href="index.html" class="nav__logo">
+             <i class="ri-planet-line"></i> Theta 2k24
+           </a>
+           <h2 class="dates"> March 29 - March 31, 2024 </h2>
+             <ul class="socials">
+                 <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
+                 <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
+                 <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
+             </ul>
+         </div>
+         <div class="footer-bottom">
+             <p>copyright &copy;2024. Designed by <span>ABX</span></p>
+         </div>
+     </footer>
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
    </body>

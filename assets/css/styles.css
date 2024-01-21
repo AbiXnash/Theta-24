@@ -1676,6 +1676,69 @@ transition: background-color 0.3s ease;
 background-color: #45a049;
 }
 
+.event-card {
+  display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+max-height: 100%; /* Set a maximum height */
+overflow-y: auto;
+
+
+}
+
+h2 {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.event-card-content {
+  flex-grow: 1; /* Grow to fill remaining space in the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.event-card p.date {
+  font-weight: bold;
+  color: #4caf50; 
+}
+
+.event-card p.description {
+  border-radius: 8px;
+  padding: 3px;
+  border: 1px solid #dddddd45;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+.register-button {
+  margin-top: auto; /* Align the button to the bottom of the card */
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #45a049;
+}
+
 @media screen and (max-width: 768px) {
 .tab {
 padding: 8px 12px;
