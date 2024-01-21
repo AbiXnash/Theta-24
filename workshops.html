@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+      <title>Theta 2k24 | Workshops</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+        <nav class="nav container">
+           <div class="nav__data">
+              <a href="index.html" class="nav__logo">
+                 <i class="ri-planet-line"></i> Theta 2k24
+              </a>
+              
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+
+           <!--=============== NAV MENU ===============-->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a href="index.html" class="nav__link">Home</a></li>
+
+                 <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+
+                 <li><a href="crew.html" class="nav__link">Crew</a></li>
+
+                 <!--=============== DROPDOWN 1 ===============-->
+                 <li class="dropdown__item" id="registrationDropdown">
+                    <div class="nav__link" onclick="toggleDropdown()">
+                       Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu" id="registrationMenu">
+                       <li>
+                          <a href="workshops.html" class="dropdown__link">
+                             <i class="ri-pie-chart-line"></i> Workshops
+                          </a>                          
+                       </li>
+
+                       <!-- <li>
+                          <a href="#" class="dropdown__link">
+                             <i class="ri-arrow-up-down-line"></i> Coming Soon
+                          </a>
+                       </li> -->
+
+                       <!--=============== DROPDOWN SUBMENU ===============-->
+                       <li class="dropdown__subitem">
+                          <a href="events.html" class="dropdown__link">
+                             <i class="ri-bar-chart-line"></i> On-Theta Events
+                          </a>
+                       </li>
+                    </ul>
+                 </li>
+
+                 <li><a href="contact.html" class="nav__link">Contact</a></li>
+              </ul>
+           </div>
+        </nav>
+     </header>
+
+     <div class="card-container">
+        <div class="item-container">
+            <div class="img-container">
+                <img src="./images/img1.jpg" alt="Event image">
+            </div>
+
+            <div class="card-body-container" style>
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">Bubbe's Book Club</p>
+                    <div class="separator"></div>
+                    <p class="info">Bellmore, NY</p>
+                    <p class="price">Free</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Grand Central Terminal
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00 AM EDT
+                        </p>
+
+                        <p class="info description">
+                            Welcome! Everyone has a unique perspective after reading a book, and we would love you
+                            to share yours with us! We meet one Sunday evening <span>more...</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="action">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="./images/img2.jpg" alt="Event image">
+            </div>
+
+            <div class="card-body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">The Overstory</p>
+                    <div class="separator"></div>
+                    <p class="info">New York, NY</p>
+                    <p class="price">29$</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            245 W 52nd St, New York
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00 AM EDT
+                        </p>
+
+                        <p class="info description">
+                            Welcome! Everyone has a unique perspective after reading a book, and we would love you
+                            to share yours with us! We meet one Sunday evening <span>more...</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="action">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="./images/img3.jpg" alt="Event image">
+            </div>
+
+            <div class="card-body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">The NY Festival</p>
+                    <div class="separator"></div>
+                    <p class="info">New York, NY</p>
+                    <p class="price">70$</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            245 W 52nd St, New York
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00 AM EDT
+                        </p>
+
+                        <p class="info description">
+                            Welcome! Everyone has a unique perspective after reading a book, and we would love you
+                            to share yours with us! We meet one Sunday evening <span>more...</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="action">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="./images/img4.jpg" alt="Event image">
+            </div>
+
+            <div class="card-body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">Tech Bubble Conf</p>
+                    <div class="separator"></div>
+                    <p class="info">New York, NY</p>
+                    <p class="price">35$</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            245 W 52nd St, New York
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00 AM EDT
+                        </p>
+
+                        <p class="info description">
+                            Welcome! Everyone has a unique perspective after reading a book, and we would love you
+                            to share yours with us! We meet one Sunday evening <span>more...</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="action">Book it</button>
+            </div>
+        </div>
+    </div>
+
+      <footer >
+        <div class="footer-content">
+          <a href="index.html" class="nav__logo">
+            <i class="ri-planet-line"></i> Theta 2k24
+          </a>
+          <h2 class="dates"> March 29 - March 31, 2024 </h2>
+            <ul class="socials">
+                <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024. Designed by <span>ABX</span></p>
+        </div>
+    </footer>
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

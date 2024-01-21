@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Theta 2k24</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="index.html" class="nav__logo">
+                  <i class="ri-planet-line"></i> Theta 2k24
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="index.html" class="nav__link">Home</a></li>
+
+                  <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+
+                  <li><a href="crew.html" class="nav__link">Crew</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item" id="registrationDropdown">
+                     <div class="nav__link" onclick="toggleDropdown()">
+                        Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu" id="registrationMenu">
+                        <li>
+                           <a href="workshops.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Workshops
+                           </a>                          
+                        </li>
+
+                        <!-- <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Coming Soon
+                           </a>
+                        </li> -->
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <a href="events.html" class="dropdown__link">
+                              <i class="ri-bar-chart-line"></i> On-Theta Events
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="contact.html" class="nav__link">Contact</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <section class="countdown">
+         <h2 class="theta1" style="font-weight: 580;">
+            <span id = "theta"> Theta </span> 2k24 <br/>
+          </h2>
+          <div class="hero-container">
+            <div class="environment"></div>
+            <h2 class="hero glitch layers" data-text="Innovate. Integrate. Celebrate."><span>Innovate. Integrate. Celebrate.</span></h2>
+          </div>
+
+          <div class="body-container clearfix">
+              <div id="time">
+                  
+                  <div class="circle first" style="--clr:#fff">
+                      <div class="dots day_dot"></div>
+                      <svg>
+                          <circle cx = "70" cy = "70" r = "70"></circle>
+                          <circle cx = "70" cy = "70" r = "70" id = "dd"></circle>
+                      </svg>
+                      <div id="days">00 <br/><span>Days</span></div>
+                  </div>
+                  <div class="circle first" style= "--clr:#ff2972">
+                      <div class="dots hr_dot"></div>
+                      <svg>
+                          <circle cx = "70" cy = "70" r = "70"></circle>
+                          <circle cx = "70" cy = "70" r = "70" id = "hh"></circle>
+                      </svg>
+                      <div id="hours">00 <br/><span>Hours</span></div>
+                  </div>
+                  <div class="circle second" style= "--clr:#fee800">
+                      <div class="dots min_dot" ></div>
+                      <svg>
+                          <circle cx = "70" cy = "70" r = "70"></circle>
+                          <circle cx = "70" cy = "70" r = "70" id = "mm"></circle>
+                      </svg>
+                      <div id="minutes">00 <br/><span>Minutes</span></div>
+                  </div>
+                  <div class="circle second" style= "--clr:#04fc43">
+                      <div class="dots sec_dot" ></div>
+                      <svg>
+                          <circle cx = "70" cy = "70" r = "70"></circle>
+                          <circle cx = "70" cy = "70" r = "70" id = "ss"></circle>
+                      </svg>
+                      <div id="seconds">00 <br/><span>Seconds</span> </div>
+                  </div>
+                  
+              </div>
+              <div class="theta">
+               <div class="theta-row">
+                  <section class="theta-date">
+                     <span class="theta-span">March 29, 2024</span>
+                  </section>
+                  <section class="theta-line">
+                     <span class="theta-span"></span>
+                  </section>
+                  <section class="theta-content">
+                     <h2 class="theta-header"> <a href="#">Day 1 </a>< <small> Click for details </small></h2>
+                     <p class="theta-para">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat eos error consequuntur impedit debitis alias, qui consectetur delectus! Omnis, dolores?
+                     </p>
+                  </section>  
+               </div>
+               <div class="theta-row">
+                  <section class="theta-date">
+                     <span class="theta-span">March 30, 2024</span>
+                  </section>
+                  <section class="theta-line">
+                     <span class="theta-span"></span>
+                  </section>
+                  <section class="theta-content">
+                     <h2 class="theta-header"> <a href="#">Day 2 </a>< <small> Click for details </small></h2>
+                     <p class="theta-para">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat eos error consequuntur impedit debitis alias, qui consectetur delectus! Omnis, dolores?
+                     </p>
+                  </section>  
+               </div>
+               <div class="theta-row">
+                  <section class="theta-date end">
+                     <span class="theta-span">March 31, 2024</span>
+                  </section>
+                  <section class="theta-line">
+                     <span class="theta-span"></span>
+                     <span class="theta-span ending"></span>
+                  </section>
+                  <section class="theta-content end">
+                     <h2 class="theta-header"> <a href="#">Day 3 </a>< <small> Click for details </small></h2> 
+                     <p class="theta-para"> 
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat eos error consequuntur impedit debitis alias, qui consectetur delectus! Omnis, dolores?
+                     </p>
+                  </section>  
+               </div>
+              </div>
+              
+              
+          </div>
+          <div class="btn-container">
+              <a href="timeline.html" class='button-40'> <span class='text'>  Let&apos;s Begin... </span></a>
+              <p>Click to view full timeline</p>
+          </div>
+      </section>
+
+
+      <footer>
+        <div class="footer-content">
+          <a href="index.html" class="nav__logo">
+            <i class="ri-planet-line"></i> Theta 2k24
+          </a>
+          <h2 class="dates"> March 29 - March 31, 2024 </h2>
+            <ul class="socials">
+                <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024. Designed by <span>ABX</span></p>
+        </div>
+    </footer>
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
