@@ -12,6 +12,83 @@
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
+
+      <style>
+        .event-card {
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+         max-height: 100%; /* Set a maximum height */
+        overflow-y: auto
+        }
+    
+        h2 {
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    
+        .event-card-content {
+            flex-grow: 1; /* Grow to fill remaining space in the card */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    
+        .event-card p.date {
+            font-weight: bold;
+            color: #4caf50;
+            
+        }
+    
+        .register-button {
+            margin-top: auto; /* Align the button to the bottom of the card */
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .register-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    <script>
+        function displayEvents(events) {
+            const eventsContainer = document.getElementById('events-container');
+            eventsContainer.innerHTML = '';
+    
+            events.forEach(event => {
+                const card = document.createElement('div');
+                card.classList.add('event-card');
+                card.innerHTML = `
+                    <h2>${event.title}</h2>
+                    <div class="event-card-content">
+                        <p class="date">${event.date}</p>
+                        <p>${event.note}</p>
+                    </div>
+                    <a href="${event.link}" class="register-button">Register</a>
+                `;
+                eventsContainer.appendChild(card);
+            });
+        }
+    </script>
+    
       <title>Theta 2k24 | Workshops</title>
    </head>
    <body>
@@ -88,16 +165,16 @@
             // Sample data for events (replace this with your actual data)
             const eventData = {
                 1: [
-                    { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', note: 'Description of Event 1', link: '#' },
-                    { date: '2024-01-21', title: 'Event 2', note: 'Description of Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
+                    { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
+                    { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
 
                 ],
                 2: [
-                    { date: '2024-01-22', title: 'Event 3', note: 'Description of Event 3' },
+                    { date: '2024-01-22', title: 'ssssss', note: 'lorem'},
 
                 ],
                 3: [
-                    { date: '2024-01-23', title: 'Event 5', note: 'Description of Event 5' },
+                    { date: '2024-01-23', title: 'Event 5'},
             ],
             };
     
@@ -118,22 +195,30 @@
                 }
             }
 
-            function displayEvents(events) {
-                const eventsContainer = document.getElementById('events-container');
-                eventsContainer.innerHTML = '';
 
-                events.forEach(event => {
-                    const card = document.createElement('div');
-                    card.classList.add('event-card');
-                    card.innerHTML = `
-                        <h2>${event.title}</h2>
-                        <p> ${event.date}</p>
-                        <p>${event.note}</p>
-                        <a href=${event.link} class="register-button">Register</a>
-                    `;
-                    eventsContainer.appendChild(card);
-                });
-            }
+
+
+    // Update the displayEvents function
+    function displayEvents(events) {
+        const eventsContainer = document.getElementById('events-container');
+        eventsContainer.innerHTML = '';
+
+        events.forEach(event => {
+            const card = document.createElement('div');
+            card.classList.add('event-card');
+            card.innerHTML = `
+                <h2>${event.title}</h2>
+                <div>
+                    <p class="date">${event.date}</p>
+                    <p class="description">${event.note}</p>
+                </div>
+                <a href="${event.link}" class="register-button">Register</a>
+            `;
+            eventsContainer.appendChild(card);
+        });
+    }
+
+
 
             // Show all events by default
             showEvents('all');
