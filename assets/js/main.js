@@ -99,3 +99,25 @@ let x = setInterval(function () {
 //   // Update footer visibility on scroll
 //   window.addEventListener("scroll", updateFooterVisibility);
 // });
+window.addEventListener('DOMContentLoaded', function() {
+  adjustFooterPosition(); // Adjust footer position on page load
+});
+
+window.addEventListener('resize', function() {
+  adjustFooterPosition(); // Adjust footer position when the window is resized
+});
+
+function adjustFooterPosition() {
+  const body = document.body;
+  const html = document.documentElement;
+  const windowHeight = window.innerHeight;
+  const bodyHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  if (bodyHeight < windowHeight) {
+      // If the content height is less than the viewport height, adjust the footer position
+      document.querySelector('footer').style.marginTop = (windowHeight - bodyHeight) + 'px';
+  } else {
+      // Reset the margin if the content height is greater than or equal to the viewport height
+      document.querySelector('footer').style.marginTop = 'auto';
+  }
+}

@@ -55,6 +55,25 @@ body {
   background-color: hsl(0, 0%, 6%);
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  flex: 1; /* Grow and fill the available space */
+}
+
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+
 ul {
   list-style: none;
   /* Color highlighting when pressed on mobile devices */
