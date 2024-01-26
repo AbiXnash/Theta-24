@@ -183,6 +183,22 @@ a {
   }
 }
 
+.nav__logo {
+  width: 120px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.nav__logo.nav__logo_footer {
+  width: 150px;
+  height: auto;
+}
+
+@media screen and (max-width: 1117px) {
+  .nav__logo {
+    width: 100px;
+  }
+}
+
 .nav__link {
   color: #fff;
   background-color: hsl(0, 0%, 2%);
@@ -394,6 +410,7 @@ footer {
 }
 
 footer .footer-content .dates {
+  margin-top: -20px;
   /* font-family: "Arizonia", cursive; */
   letter-spacing: 2px;
 }
@@ -1758,6 +1775,11 @@ h2 {
     width: 100%;
   }
 }
+.contact .socials li a {
+  text-decoration: none;
+  color: #ffd700; /* Set the color to yellow (replace with your preferred color code) */
+  font-size: 24px;
+}
 
 :root {
   --first-color: #2e2e41;
@@ -1860,11 +1882,4 @@ h2 {
   background: linear-gradient(to left, transparent, #1a1a1acf 80%);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-}
-
-
-@media screen and (max-width: 1117px) {
-  .nav__logo {
-      width: 100px;
-  }
 }
