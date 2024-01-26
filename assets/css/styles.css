@@ -1861,3 +1861,10 @@ h2 {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
+
+@media screen and (max-width: 1117px) {
+  .nav__logo {
+      width: 100px;
+  }
+}
