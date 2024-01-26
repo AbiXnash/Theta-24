@@ -140,14 +140,79 @@ const IconVisibility = () => {
   let scrollableWidth = tabmenu.scrollWidth - tabmenu.clientWidth;
 
   btnleft.style.display = scrollLeftValue > 0 ? "block" : "none";
-  btnright.style.display = scrollLeftValue < scrollableWidth ? "block" : "none";
+  btnright.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
 };
 
 btnright.addEventListener("click", () => {
   tabmenu.scrollLeft += 200;
-  IconVisibility();
+  setTimeout(() => IconVisibility(), 50); // IconVisibility();
 });
 
 btnleft.addEventListener("click", () => {
   tabmenu.scrollLeft -= 200;
+  setTimeout(() => IconVisibility(), 50);
+});
+
+window.onload = function () {
+  btnright.style.display =
+    tabmenu.scrollWidth > tabmenu.clientWidth ||
+    tabmenu.scrollWidth >= window.innerWidth
+      ? "block"
+      : "none";
+  btnleft.style.display =
+    tabmenu.scrollWidth >= window.innerWidth ? "" : "none";
+};
+
+window.onresize = function () {
+  btnright.style.display =
+    tabmenu.scrollWidth > tabmenu.clientWidth ||
+    tabmenu.scrollWidth >= window.innerWidth
+      ? "block"
+      : "none";
+
+  btnleft.style.display =
+    tabmenu.scrollWidth >= window.innerWidth ? "" : "none";
+
+  let scrollLeftValue = Math.round(tabmenu.scrollLeft);
+  btnleft.style.display = scrollLeftValue > 0 ? "block" : "none";
+};
+
+let activeDrag = false;
+
+tabmenu.addEventListener("mousemove", (drag) => {
+  if (!activeDrag) return;
+  tabmenu.scrollLeft -= drag.movementX;
+  IconVisibility();
+  tabmenu.classList.add("dragging");
+});
+
+document.addEventListener("mouseup", () => {
+  activeDrag = false;
+  tabmenu.classList.remove("dragging");
+});
+
+tabmenu.addEventListener("mousedown", (drag) => {
+  activeDrag = true;
+});
+
+const tabs = document.querySelectorAll(".tab");
+const tabbtns = document.querySelectorAll(".tab-btn");
+
+const tab_Nav = function (tabbtnClick) {
+  tabbtns.forEach((tabbtn) => {
+    tabbtn.classList.remove("active");
+  });
+
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  tabbtns[tabbtnClick].classList.add("active");
+  tabs[tabbtnClick].classList.add("active");
+};
+
+tabbtns.forEach((tabbtn, i) => {
+  tabbtn.addEventListener("click", () => {
+    tab_Nav(i);
+  });
 });

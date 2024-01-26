@@ -394,7 +394,7 @@ footer {
 }
 
 footer .footer-content .dates {
-  font-family: "Arizonia", cursive;
+  /* font-family: "Arizonia", cursive; */
   letter-spacing: 2px;
 }
 
@@ -1593,7 +1593,8 @@ body {
 
 .event-card {
   width: 100%;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 400px;
   margin: 10px;
   padding: 15px;
   border: 1px solid #45a049;
@@ -1799,6 +1800,16 @@ h2 {
   box-shadow: var(--box-shadow);
   overflow-x: auto;
   user-select: none;
+  scroll-behavior: smooth;
+}
+
+.tab-menu.dragging {
+  scroll-behavior: unset;
+  cursor: grab;
+}
+
+.tab-menu.dragging .tab-btn {
+  pointer-events: none;
 }
 
 .tab-menu::-webkit-scrollbar {

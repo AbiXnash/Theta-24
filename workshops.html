@@ -80,8 +80,8 @@
                   <ul class="tab-menu">
                      <li class="tab-btn active" onclick="showEvents('all')">All</li>
                      <li class="tab-btn" onclick="showEvents('Cluster 1')">Emulsion</li>
-                     <li class="tab-btn" onclick="showEvents('all')">Informatica</li>
-                     <li class="tab-btn" onclick="showEvents('all')">Electronica</li>
+                     <li class="tab-btn" onclick="showEvents('Informatica')">Informatica</li>
+                     <li class="tab-btn" onclick="showEvents('Electronica')">Electronica</li>
                      <li class="tab-btn" onclick="showEvents('all')">Biogenesis</li>
                      <li class="tab-btn" onclick="showEvents('all')">Stragica</li>
                      <li class="tab-btn" onclick="showEvents('all')">Access America</li>
@@ -102,21 +102,41 @@
     
         <script>
          const eventData = {
-             'Cluster 1': [
+             'Emulsion': [
                  { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
                  { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
              ],
-             'Cluster 2': [
-                 { date: '2024-01-22', title: 'ssssss', note: 'lorem sdf df sdg we her twsdsdf afda adasdsad sdsdfsdf wqe d s rq sd fd fe fsd fsdfdsfsd fsdfds fsdf sdf'},
+             'Informatica': [
+                 { date: '2024-01-22', title: 'ssssss', price1: '121', price2: '131'},
              ],
-             'Cluster 3': [
+             'Electronica': [
                  { date: '2024-01-23', title: 'Event 5'},
              ],
-             // Add more clusters as needed
-             // ...
-             'Cluster 11': [
-                 // Events for Cluster 11
+             'Biogenesis': [
+                 { date: '2024-01-23', title: 'Event 5'},
              ],
+             'Stragica': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             'Access America': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             'Mathematica': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             'Robotics': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             'Optica': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             'Sportiva': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             'Equilibria': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+
          };
 
          function showEvents(cluster) {
@@ -147,14 +167,13 @@
                      <h2>${event.title}</h2>
                      <div>
                          <p class="date">${event.date}</p>
-                         <p class="description">${event.note}</p>
+                         <p class="description">SASTRA Campus Students: <strong> ${event.price1} </strong> <br> Other College Students: <strong> ${event.price2} </strong></p>
                      </div>
                      <a href="${event.link}" class="register-button">Register</a>
                  `;
                  eventsContainer.appendChild(card);
              });
          }
-
          showEvents('all');
      </script>
  </section>
