@@ -134,9 +134,9 @@
             card.innerHTML = `
                 <h2>${event.title}</h2>
                 <div>
-                    <p class="date">${event.date}</p>
-                    <p class="description">${event.note}</p>
-                </div>
+                  <p class="date">${event.date}</p>
+                  <p class="description">SASTRA Campus Students: <strong> ${event.price1} </strong> <br> Other College Students: <strong> ${event.price2} </strong></p>
+               </div>
                 <a href="${event.link}" class="register-button">Register</a>
             `;
             eventsContainer.appendChild(card);
