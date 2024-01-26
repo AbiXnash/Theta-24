@@ -7,6 +7,7 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -71,72 +72,92 @@
      </header>
 
      <section class="card-container">
-        <ul class="tabs">
-            <li class="tab" onclick="showEvents('all')">All</li>
-            <li class="tab" onclick="showEvents(1)">Day 1</li>
-            <li class="tab" onclick="showEvents(2)">Day 2</li>
-            <li class="tab" onclick="showEvents(3)">Day 3</li>
-        </ul>
-    
-        <div class="events-container" id="events-container">
-            <!-- Events will be dynamically added here based on the selected day -->
-        </div>
+         <div class="tab-nav-bar">
+            <div class="tab-navigation">
+               <i class="uil uil-angle-left left-btn"></i>
+               <i class="uil uil-angle-right right-btn"></i>
+               <div class="tab-menu">
+                  <ul class="tab-menu">
+                     <li class="tab-btn active">All</li>
+                     <li class="tab-btn">Emulsion</li>
+                     <li class="tab-btn">Informatica</li>
+                     <li class="tab-btn">Electronica</li>
+                     <li class="tab-btn">Biogenesis</li>
+                     <li class="tab-btn">Stragica</li>
+                     <li class="tab-btn">Access America</li>
+                     <li class="tab-btn">Mathematica</li>
+                     <li class="tab-btn">Robotics</li>
+                     <li class="tab-btn">Optica</li>
+                     <li class="tab-btn">Sportiva</li>
+                     <li class="tab-btn">Equilibria</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+      <div class="events-container" id="events-container">
+          <!-- Events will be dynamically added here based on the selected cluster -->
+      </div>
+
     
         <script>
+         const eventData = {
+             'Cluster 1': [
+                 { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
+                 { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
+             ],
+             'Cluster 2': [
+                 { date: '2024-01-22', title: 'ssssss', note: 'lorem sdf df sdg we her twsdsdf afda adasdsad sdsdfsdf wqe d s rq sd fd fe fsd fsdfdsfsd fsdfds fsdf sdf'},
+             ],
+             'Cluster 3': [
+                 { date: '2024-01-23', title: 'Event 5'},
+             ],
+             // Add more clusters as needed
+             // ...
+             'Cluster 11': [
+                 // Events for Cluster 11
+             ],
+         };
 
-            const eventData = {
-                1: [
-                    { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
-                    { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
+         function showEvents(cluster) {
+             const eventsContainer = document.getElementById('events-container');
+             const tabs = document.querySelectorAll('.tab');
 
-                ],
-                2: [
-                    { date: '2024-01-22', title: 'ssssss', note: 'lorem sdf df sdg we her twsdsdf afda adasdsad sdsdfsdf wqe d s rq sd fd fe fsd fsdfdsfsd fsdfds fsdf sdf'},
+             tabs.forEach(tab => tab.classList.remove('active'));
 
-                ],
-                3: [
-                    { date: '2024-01-23', title: 'Event 5'},
-            ],
-            };
-    
-            function showEvents(day) {
-                const eventsContainer = document.getElementById('events-container');
-                const tabs = document.querySelectorAll('.tab');
+             if (cluster === 'all') {
+                 const allEvents = Object.values(eventData).flat();
+                 displayEvents(allEvents);
+                 tabs[0].classList.add('active');
+             } else {
+                 const events = eventData[cluster];
+                 displayEvents(events);
+                 tabs[Array.from(tabs).findIndex(tab => tab.innerText === cluster)].classList.add('active');
+             }
+         }
 
-                tabs.forEach(tab => tab.classList.remove('active'));
-                
-                if (day === 'all') {
-                    const allEvents = Object.values(eventData).flat();
-                    displayEvents(allEvents);
-                    tabs[0].classList.add('active'); 
-                } else {
-                    const events = eventData[day];
-                    displayEvents(events);
-                    tabs[day].classList.add('active');
-                }
-            }
+         function displayEvents(events) {
+             const eventsContainer = document.getElementById('events-container');
+             eventsContainer.innerHTML = '';
 
-    function displayEvents(events) {
-        const eventsContainer = document.getElementById('events-container');
-        eventsContainer.innerHTML = '';
+             events.forEach(event => {
+                 const card = document.createElement('div');
+                 card.classList.add('event-card');
+                 card.innerHTML = `
+                     <h2>${event.title}</h2>
+                     <div>
+                         <p class="date">${event.date}</p>
+                         <p class="description">${event.note}</p>
+                     </div>
+                     <a href="${event.link}" class="register-button">Register</a>
+                 `;
+                 eventsContainer.appendChild(card);
+             });
+         }
 
-        events.forEach(event => {
-            const card = document.createElement('div');
-            card.classList.add('event-card');
-            card.innerHTML = `
-                <h2>${event.title}</h2>
-                <div>
-                    <p class="date">${event.date}</p>
-                    <p class="description">${event.note}</p>
-                </div>
-                <a href="${event.link}" class="register-button">Register</a>
-            `;
-            eventsContainer.appendChild(card);
-        });
-    }
-            showEvents('all');
-        </script>
-     </section>
+         showEvents('all');
+     </script>
+ </section>
 
       <footer >
          <div class="footer-content">

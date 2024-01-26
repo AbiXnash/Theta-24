@@ -1757,3 +1757,96 @@ h2 {
     width: 100%;
   }
 }
+
+:root {
+  --first-color: #2e2e41;
+  --second-color: #4caf50;
+  --third-color: #121212;
+  --text-color: #fff;
+  --box-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+  --text-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+}
+
+.card-container {
+  padding-top: 150px;
+  margin: 0 80px;
+  position: reltive;
+}
+
+.tab-nav-bar {
+  position: relative;
+  margin: 65px 10px 40px 10px;
+}
+
+.tab-navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.tab-menu {
+  color: var(--text-color);
+  list-style: none;
+  background: var(--third-color);
+  max-width: 800px;
+  padding: 10px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--third-color);
+  border-radius: 50px;
+  box-shadow: var(--box-shadow);
+  overflow-x: auto;
+  user-select: none;
+}
+
+.tab-menu::-webkit-scrollbar {
+  display: none;
+}
+.tab-btn {
+  color: var(--text-color);
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 2px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: var(--first-color);
+}
+
+.tab-btn.active {
+  background: var(--second-color);
+}
+
+.left-btn,
+.right-btn {
+  position: absolute;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.left-btn {
+  left: 0;
+  /* border-radius: 50%; */
+  background: linear-gradient(to left, transparent, #1a1a1acf 80%);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: none;
+}
+
+.right-btn {
+  right: 0;
+  /* border-radius: 50%; */
+  background: linear-gradient(to left, transparent, #1a1a1acf 80%);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
