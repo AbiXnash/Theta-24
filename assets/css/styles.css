@@ -1707,3 +1707,53 @@ h2 {
     width: 100%;
   }
 }
+
+.contact-grid {
+  padding-top: 150px;
+  color: #fff; /* Change text color to white */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Set background color to black */
+}
+
+.contact-card {
+  min-height: 200px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #ffe600;
+  box-shadow: 0 0 20px rgba(247, 255, 23, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card p {
+  text-align: center; /* Center the content within the <p> tag */
+}
+
+/* .contact-card h2 {
+  color: yellow; 
+} */
+
+.contact-card strong {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1117px) {
+  .contact-grid {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-grid {
+    padding-top: 100px;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
