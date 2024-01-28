@@ -10,215 +10,24 @@
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
-        <style>
-            /* 
-=========================
-Fonts
-=========================
 
-font-family: 'Outfit', sans-serif;
-
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
-
-/* 
-========================
-Variables
-========================
-*/
-
-
-:root {
-    
-    font-size: 15px;
-    
-    /* Primary */
-    --var-soft-blue: hsl(215, 51%, 70%);
-    --var-cyan: hsl(178, 100%, 50%);
-    /* Neutral */
-    --var-main-darkest: hsl(217, 54%, 11%);
-    --var-card-dark: hsl(216, 50%, 16%);
-    --var-line-dark: hsl(215, 32%, 27%);
-    --var-lightest: white;
-    
-    /* Fonts */
-    
-    --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
-    
-    --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
-    
-    --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+      <style>
+        :root {
+  --surface-color: #fff;
+  --curve: 40;
 }
 
-/* 
-=======================
-Setup
-=======================
-*/
-
-html {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-    margin: 0;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-img {
-    width: 100%;
-    border-radius: 15px;
-    display: block;
-}
+  
+      </style>
 
-a {
-    color: inherit;
-}
-
-/* 
-
-Eye view
-
-https://i.postimg.cc/9MtT4GZY/view.png' border='0' alt='view */
-
-/*
-=========================
-Font Styling
-=========================
-*/
-
-h1 {
-    font: var(--var-heading);
-    color: var(--var-lightest);
-    padding: 1.2em 0;
-}
-
-h2 {
-    font: var(--var-small-heading);
-    color: var(--var-lightest);
-    /* padding on .coin-base */
-}
-
-p {
-    font: var(--var-para);
-    color: var(--var-soft-blue);
-}
-
-span {
-    color: white;
-}
-/* 
-=====================
-Classes
-=====================
-*/
-
-/* LAYOUT */
-
-.card-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 2em auto;
-    background-color: var(--var-card-dark);
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    padding: 2rem;
-}
-
-div.flex-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-div.coin-base, .time-left, .card-attribute {
-    display: flex;
-    align-items: center;
-    padding: 1em 0;
-}
-
-.card-attribute {
-    padding-bottom: 1.5em;
-    border-top: 2px solid var(--var-line-dark);
-}
-
-a.hero-image-container {
-    position: relative;
-    display: block;
-}
-
-
-
-/* Details */
-
-img.eye {
-    position: absolute;
-    width: 100%;
-    max-width: 2em;
-    top: 44%;
-    left: 43%;
-}
-
-@media (min-width:400px) {
-  img.eye {
-    max-width: 3em;
-}
-}
-
-.hero-image-container::after {
-    content: '';
-    background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 5rem;
-    background-color: hsla(178, 100%, 50%, 0.3);
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-.hero-image-container:hover::after {
-  opacity: 1;
-}
-
-.small-image {
-    width: 1.2em;
-    margin-right: .5em;
-}
-
-.small-avatar {
-    width: 2em;
-    border-radius: 200px;
-    outline: 2px solid white;
-    margin-right: 1.4em;
-}
-
-div.attribution {
-    margin: 0 auto;
-    width: 100%;
-    font: var(--var-para);
-    text-align: center;
-    padding: 1.5em 0 4em 0;
-    color: var(--var-line-dark);
-}
-.attribution a {
-    color: var(--var-soft-blue);
-}
-
-@media (min-width:600px) {
-    body {
-        font-size: 18px;
-    }
-}
-        </style>
       <title>Theta 2k24 | Workshops</title>
    </head>
    <body>
@@ -277,64 +86,214 @@ div.attribution {
         </nav>
      </header>
 
-     <section class="container-card">
-        <div class="card-container">
-            <a href="/" class="hero-image-container">
-              <img class="hero-image" src="assets/img/Theta.jpg" alt="Spinning glass cube"/>
-            </a>
-            <main class="main-content">
-              <h1><a href="#">Emulsion</a></h1>
-              <p>We speak Cinema</p>
-              <div class="flex-row">
-                <div class="coin-base">
-                  <h2>Events: 6</h2>
+     <section>
+        <ul class="cards">
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Emulsion</h3>            
+                      <span class="card__status">We Speak Cinema</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Emulsion celebrates creativity and innovation in various forms of media and art. It includes contests such as photography, videography, AD, and short films. Participants showcase their skills and creativity in friendly competition.
+                  </p>
+                  
                 </div>
-                <div class="time-left">
-                  <p>Workshops: 0</p>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Equilibria</h3>            
+                      <span class="card__status">எண்திசை எங்கும் எம் தமிழ்</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Equilibria is the vibrant community celebrating Tamil culture through various cultural events like essay writings,script writings, elocutions and language workshops.Join us to immerse yourself in the richness of Tamil heritage.
+                    “வேற்றுமை இன்றி ழகரம் பழகுவோம்”                    
+                  </p>
+                  
                 </div>
-              </div>
-            </main>
-            
-          </div>
-      </div>
-      <div class="card-container">
-        <a href="/" class="hero-image-container">
-          <img class="hero-image" src="assets/img/Theta.jpg" alt="Spinning glass cube"/>
-        </a>
-        <main class="main-content">
-          <h1><a href="#">Emulsion</a></h1>
-          <p>We speak Cinema</p>
-          <div class="flex-row">
-            <div class="coin-base">
-              <h2>Events: 6</h2>
-            </div>
-            <div class="time-left">
-              <p>Workshops: 0</p>
-            </div>
-          </div>
-        </main>
-        
-      </div>
-  </div>
-  <div class="card-container">
-    <a href="/" class="hero-image-container">
-      <img class="hero-image" src="assets/img/Theta.jpg" alt="Spinning glass cube"/>
-    </a>
-    <main class="main-content">
-      <h1><a href="#">Emulsion</a></h1>
-      <p>We speak Cinema</p>
-      <div class="flex-row">
-        <div class="coin-base">
-          <h2>Events: 6</h2>
-        </div>
-        <div class="time-left">
-          <p>Workshops: 0</p>
-        </div>
-      </div>
-    </main>
-    
-  </div>
-</div>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Biogenesis</h3>            
+                      <span class="card__status">Unzipping the mystery of universe</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Biogenesis is a community of passionate individuals exploring the wonders of life sciences through workshops,hands-on experiments and events. Join us to cultivate your curiosity, engage in scientific exploration, and connect with fellow biology enthusiasts.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Access America</h3>            
+                      <span class="card__status">Language nexus :Where Words Come Alive, Ideas Take Flight.</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Immerse yourself in the power of language, explore literary realms, and unleash your creativity. This cluster also features Workshops for a holistic transformation of self-expression.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Mathematica</h3>            
+                      <span class="card__status">From formulae to future : Navigating the World through maths</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Mathematica : Turning Complexity into Clarity . To celebrate the beauty of mathematics and compete with like-minded enthusiasts. Join us for a day of mathematical exploration, camaraderie, and the chance to emerge as a champion in the world of numbers and logic.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Sportiva</h3>            
+                      <span class="card__status">Let the passion meet performance in the playground of ultimate Fun</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    SPORTIVA : An exhilarating fusion of sportsmanship and entertainment, our dynamic cluster is a vibrant hub where the thrill of competitive sports meets the joy of fun-filled events. Join us for a lively celebration of athleticism, camaraderie, and unforgettable moments that redefine the essence of sports and leisure.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Robotics</h3>            
+                      <span class="card__status">Future unlimited!
+                        Make it happen, Mission with passion - Robotic Fusion
+                       </span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    To facilitate students to understand, design, and learn robotics. Provide interested students with opportunities to participate in competitive robotic events to unleash their skills, knowledge, creativity, and teamwork through conceptualizing and programming robots.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="index.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Electronica</h3>            
+                      <span class="card__status">Electrify Your Skills, Amplify Your Future</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Join our Electronica Cluster for cool tech stuff! We've got workshops, competitions, and experts sharing smart ideas in electronics and communication – it's like a party for technology fans!
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+
+            <li>
+                <a href="#" class="card">
+                  <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                      <div class="card__header-text">
+                        <h3 class="card__title">Informatica</h3>            
+                        <span class="card__status">It’s Not a Bug, It’s a Feature</span>
+                      </div>
+                    </div>
+                    <p class="card__description">
+                      Informatica Cluster: A dynamic code nexus where algorithms dance, innovation thrives, fostering interdisciplinary collaboration and groundbreaking solutions. More than lines of code, it's a resilient community shaping tomorrow's world through continuous learning, leveraging coding concepts, and digital pioneering.
+                    </p>
+                  </div>
+                </a>      
+              </li>
+              <li>
+                <a href="#" class="card">
+                  <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                      <div class="card__header-text">
+                        <h3 class="card__title">Strtegia</h3>            
+                        <span class="card__status">Empowering Commerce Connecting communities</span>
+                      </div>
+                    </div>
+                    <p class="card__description">Our mission is to empower businesses and individuals by providing them with the tools and resources they need to thrive in the modern economy. Through our platform, we aim to connect communities, facilitate trade, and foster collaboration. We believe that by enabling commerce and creating connections, we can drive economic growth and create opportunities for everyone.</p>
+                  </div>
+                </a>      
+              </li><li>
+                <a href="#" class="card">
+                  <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                      <div class="card__header-text">
+                        <h3 class="card__title">Optica</h3>            
+                        <span class="card__status">Exploring the Boundaries of Reality through Physics.</span>
+                      </div>
+                    </div>
+                    <p class="card__description">Welcome to our science society.Join with us for captivating discussions  and a journey through the depths of physics from quantum mechanics to cosmology. “Let's unravel the secrets of the universe together".</p>
+                  </div>
+                </a>      
+              </li>
+          </ul>
      </section>
 
      
