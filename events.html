@@ -11,97 +11,10 @@
       <link rel="stylesheet" href="assets/css/styles.css">
 
       <style>
-         .event-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-height: 100%;
-    overflow-y: auto;
-    position: relative;
-}
-
-.circle-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.circle-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-h2 {
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.event-card-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.event-card p.date {
-    font-weight: bold;
-    color: #4caf50;
-}
-
-.event-card p.description {
-    border-radius: 8px;
-    padding: 3px;
-    border: 1px solid #dddddd45;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.register-button {
-    margin-top: auto; /* Align the button to the bottom of the card */
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.register-button:hover {
-    background-color: #45a049;
-}
-
-@media screen and (max-width: 768px) {
-    .tab {
-        padding: 8px 12px;
-        font-size: 12px;
+      
+.register-btn {
+        margin-top: 15px;
     }
-
-    .event-card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .event-card {
-        width: 100%;
-    }
-}
 
       </style>
       <title>Theta 2k24 | Events</title>
@@ -182,64 +95,7 @@ h2 {
         <div class="events-container" id="events-container">
             <!-- Events will be dynamically added here based on the selected day -->
         </div>
-    
-        <script>
-            const eventData = {
-                1: [
-                    { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
-                    { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
 
-                ],
-                2: [
-                    { date: '2024-01-22', title: 'ssssss', note: 'lorem sdf df sdg we her twsdsdf afda adasdsad sdsdfsdf wqe d s rq sd fd fe fsd fsdfdsfsd fsdfds fsdf sdf'},
-
-                ],
-                3: [
-                    { date: '2024-01-23', title: 'Event 5'},
-            ],
-            };
-    
-            function showEvents(day) {
-                const eventsContainer = document.getElementById('events-container');
-                const tabs = document.querySelectorAll('.tab');
-
-                tabs.forEach(tab => tab.classList.remove('active'));
-                
-                if (day === 'all') {
-                    const allEvents = Object.values(eventData).flat();
-                    displayEvents(allEvents);
-                    tabs[0].classList.add('active'); 
-                } else {
-                    const events = eventData[day];
-                    displayEvents(events);
-                    tabs[day].classList.add('active');
-                }
-            }
-
-    function displayEvents(events) {
-        const eventsContainer = document.getElementById('events-container');
-        eventsContainer.innerHTML = '';
-
-        events.forEach(event => {
-            const card = document.createElement('div');
-            card.classList.add('event-card');
-            card.innerHTML = `
-            <div class="circle-logo">
-                <img src="assets/img/Theta.jpg" alt="Logo">
-            </div>
-                <h2>${event.title}</h2>
-                <div>
-                  <p class="date">${event.date}</p>
-                  <p class="description">SASTRA Campus Students: <strong> ${event.price1} </strong> <br> Other College Students: <strong> ${event.price2} </strong></p>
-               </div>
-                <a href="${event.link}" class="register-button">Register</a>
-            `;
-            eventsContainer.appendChild(card);
-        });
-    }
-
-            showEvents('all');
-        </script>
      </section>
 
      <footer >
@@ -258,5 +114,6 @@ h2 {
   </footer>
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+      <script src="assets/js/events.js"></script>
    </body>
 </html>
