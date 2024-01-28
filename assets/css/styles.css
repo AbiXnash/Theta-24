@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cherish&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
 /*=============== VARIABLES CSS ===============*/
 
 html {
@@ -412,7 +413,8 @@ footer {
 
 footer .footer-content .dates {
   margin-top: -20px;
-  /* font-family: "Arizonia", cursive; */
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 2rem;
   letter-spacing: 2px;
 }
 
@@ -791,6 +793,10 @@ body {
   padding: 0;
   text-align: left;
   font-size: 0.4em;
+}
+
+.theta-span {
+  font-family: "Nanum Brush Script", cursive;
 }
 
 .theta .theta-row .theta-date {
@@ -2264,6 +2270,7 @@ hr:before {
   }
 }
 
-.workshop-section {
+.workshop-section,
+.ag-courses-item_title {
   font-family: "Josefin Sans", sans-serif;
 }
