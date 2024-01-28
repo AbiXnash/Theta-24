@@ -2119,7 +2119,7 @@ q {
   margin: auto;
 }
 
-hr {
+.center-hr hr {
   color: white;
   overflow: visible; /* For IE */
   height: 30px;
@@ -2128,7 +2128,7 @@ hr {
   border-width: 2px 0 0 0;
   border-radius: 20px;
 }
-hr:before {
+.center-hr hr:before {
   /* Not really supposed to work, but does */
   display: block;
   content: "";
