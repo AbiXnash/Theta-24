@@ -7,82 +7,208 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
+
+      <link rel="icon" href="\assets\img\Theta.jpg">
 
       <title>Theta 2k24 | Our Crew</title>
    </head>
    <body>
       <!--=============== HEADER ===============-->
       <header class="header">
-        <nav class="nav container">
-           <div class="nav__data">
-              <a href="index.html" class="nav__logo">
-                 <i class="ri-planet-line"></i> Theta 2k24
-              </a>
-              
-              <div class="nav__toggle" id="nav-toggle">
-                 <i class="ri-menu-line nav__burger"></i>
-                 <i class="ri-close-line nav__close"></i>
-              </div>
-           </div>
+         <nav class="nav container">
+            <div class="nav__data">
+               
+               <img class="nav__logo" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
 
-           <!--=============== NAV MENU ===============-->
-           <div class="nav__menu" id="nav-menu">
-              <ul class="nav__list">
-                 <li><a href="index.html" class="nav__link">Home</a></li>
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="index.html" class="nav__link">Home</a></li>
 
-                 <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+                  <li><a href="timeline.html" class="nav__link">Timeline</a></li>
 
-                 <li><a href="crew.html" class="nav__link">Crew</a></li>
+                  <!-- <li><a href="crew.html" class="nav__link">Crew</a></li> -->
 
-                 <!--=============== DROPDOWN 1 ===============-->
-                 <li class="dropdown__item" id="registrationDropdown">
-                    <div class="nav__link" onclick="toggleDropdown()">
-                       Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item" id="registrationDropdown">
+                     <div class="nav__link" onclick="toggleDropdown()">
+                        Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu" id="registrationMenu">
+                        <li>
+                           <a href="workshops.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Workshops
+                           </a>                          
+                        </li>
+
+                        <!-- <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Coming Soon
+                           </a>
+                        </li> -->
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <a href="events.html" class="dropdown__link">
+                              <i class="ri-bar-chart-line"></i> On-Theta Events
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="contact.html" class="nav__link">Contact</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <section>
+         <div class="wrapper">
+
+            <div class="title">
+                <h4>President</h4>
+            </div>
+    
+            <div class="card_Container">
+    
+                <div class="card">
+    
+                    <div class="imbBx">
+                        <img src="./image/pic01.jpg" alt="">
                     </div>
+    
+                    <div class="content">
+                        <div class="contentBx">
+                            <h3>Deepak Raj <br> <span> IV B. Tech CSE </span></h3>
+                        </div>
+                        <ul class="sci">
+                            <li style="--i: 1">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li style="--i: 2">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                            </li>
+                            <li style="--i: 3">
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                 </div> <!-- Card End -->
+            </div>
+    
+        </div>
+        <div class="wrapper">
 
-                    <ul class="dropdown__menu" id="registrationMenu">
-                       <li>
-                          <a href="workshops.html" class="dropdown__link">
-                             <i class="ri-pie-chart-line"></i> Workshops
-                          </a>                          
-                       </li>
+         <div class="title">
+             <h4>Vice-Presidents</h4>
+         </div>
+ 
+         <div class="card_Container">
+ 
+             <div class="card">
+ 
+                 <div class="imbBx">
+                     <img src="assets\crew\Surya.jpg" alt="">
+                 </div>
+ 
+                 <div class="content">
+                     <div class="contentBx">
+                         <h3>Surya C <br><span>III B. Tech CSE</span></h3>
+                     </div>
+                     <ul class="sci">
+                         <li style="--i: 1">
+                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                         </li>
+                         <li style="--i: 2">
+                             <a href="#"><i class="fa-brands fa-github"></i></a>
+                         </li>
+                         <li style="--i: 3">
+                             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                         </li>
+                     </ul>
+                 </div>
+ 
+             </div>
+ 
+             <div class="card">
+ 
+                 <div class="imbBx">
+                     <img src="./image/pic02.jpg" alt="">
+                 </div>
+ 
+                 <div class="content">
+                     <div class="contentBx">
+                         <h3>aaaaaa <br><span>ARTS</span></h3>
+                     </div>
+                     <ul class="sci">
+                         <li style="--i: 1">
+                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                         </li>
+                         <li style="--i: 2">
+                             <a href="#"><i class="fa-brands fa-github"></i></a>
+                         </li>
+                         <li style="--i: 3">
+                             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                         </li>
+                     </ul>
+                 </div>
+ 
+             </div>             
+         </div>
+ 
+     </div>
+     <div class="wrapper">
 
-                       <!-- <li>
-                          <a href="#" class="dropdown__link">
-                             <i class="ri-arrow-up-down-line"></i> Coming Soon
-                          </a>
-                       </li> -->
+      <div class="title">
+          <h4>Web Design and Developer</h4>
+      </div>
 
-                       <!--=============== DROPDOWN SUBMENU ===============-->
-                       <li class="dropdown__subitem">
-                          <a href="events.html" class="dropdown__link">
-                             <i class="ri-bar-chart-line"></i> On-Theta Events
-                          </a>
-                       </li>
-                    </ul>
-                 </li>
+      <div class="card_Container">
 
-                 <li><a href="contact.html" class="nav__link">Contact</a></li>
-              </ul>
-           </div>
-        </nav>
-     </header>
+          <div class="card">
 
-      <section class="container" style="height: 65vh;">
-         <h1 class="theta1">
-            Work on Progress
-         </h1>
+              <div class="imbBx">
+                  <img src="..\assets\crew\Abinash.jpg" alt="">
+              </div>
+
+              <div class="content">
+                  <div class="contentBx">
+                      <h3>Abinash Selvarasu <br> <span> III B. Tech CSE </span></h3>
+                  </div>
+                  <ul class="sci">
+                      <li style="--i: 1">
+                          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      </li>
+                      <li style="--i: 2">
+                          <a href="#"><i class="fa-brands fa-github"></i></a>
+                      </li>
+                      <li style="--i: 3">
+                          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                      </li>
+                  </ul>
+              </div>
+
+           </div> <!-- Card End -->
+      </div>
+
+  </div>
       </section>
 
       <footer >
          <div class="footer-content">
-           <a href="index.html" class="nav__logo">
-             <i class="ri-planet-line"></i> Theta 2k24
-           </a>
+          <img class=" nav__logo nav__logo_footer" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
            <h2 class="dates"> March 29 - March 31, 2024 </h2>
-             <ul class="socials">
+             <ul class="socials" >
                  <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
                  <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
                  <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>

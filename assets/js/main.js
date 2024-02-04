@@ -99,11 +99,11 @@ let x = setInterval(function () {
 //   // Update footer visibility on scroll
 //   window.addEventListener("scroll", updateFooterVisibility);
 // });
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener("DOMContentLoaded", function () {
   adjustFooterPosition(); // Adjust footer position on page load
 });
 
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
   adjustFooterPosition(); // Adjust footer position when the window is resized
 });
 
@@ -111,13 +111,108 @@ function adjustFooterPosition() {
   const body = document.body;
   const html = document.documentElement;
   const windowHeight = window.innerHeight;
-  const bodyHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  const bodyHeight = Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight,
+  );
 
   if (bodyHeight < windowHeight) {
-      // If the content height is less than the viewport height, adjust the footer position
-      document.querySelector('footer').style.marginTop = (windowHeight - bodyHeight) + 'px';
+    // If the content height is less than the viewport height, adjust the footer position
+    document.querySelector("footer").style.marginTop =
+      windowHeight - bodyHeight + "px";
   } else {
-      // Reset the margin if the content height is greater than or equal to the viewport height
-      document.querySelector('footer').style.marginTop = 'auto';
+    // Reset the margin if the content height is greater than or equal to the viewport height
+    document.querySelector("footer").style.marginTop = "auto";
   }
 }
+
+// WORKSHOP TAB navigation
+
+const btnleft = document.querySelector(".left-btn");
+const btnright = document.querySelector(".right-btn");
+const tabmenu = document.querySelector(".tab-menu ul");
+
+const IconVisibility = () => {
+  let scrollLeftValue = Math.ceil(tabmenu.scrollLeft);
+  let scrollableWidth = tabmenu.scrollWidth - tabmenu.clientWidth;
+
+  btnleft.style.display = scrollLeftValue > 0 ? "block" : "none";
+  btnright.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
+};
+
+btnright.addEventListener("click", () => {
+  tabmenu.scrollLeft += 200;
+  setTimeout(() => IconVisibility(), 50); // IconVisibility();
+});
+
+btnleft.addEventListener("click", () => {
+  tabmenu.scrollLeft -= 200;
+  setTimeout(() => IconVisibility(), 50);
+});
+
+window.onload = function () {
+  btnright.style.display =
+    tabmenu.scrollWidth > tabmenu.clientWidth ||
+    tabmenu.scrollWidth >= window.innerWidth
+      ? "block"
+      : "none";
+  btnleft.style.display =
+    tabmenu.scrollWidth >= window.innerWidth ? "" : "none";
+};
+
+window.onresize = function () {
+  btnright.style.display =
+    tabmenu.scrollWidth > tabmenu.clientWidth ||
+    tabmenu.scrollWidth >= window.innerWidth
+      ? "block"
+      : "none";
+
+  btnleft.style.display =
+    tabmenu.scrollWidth >= window.innerWidth ? "" : "none";
+
+  let scrollLeftValue = Math.round(tabmenu.scrollLeft);
+  btnleft.style.display = scrollLeftValue > 0 ? "block" : "none";
+};
+
+let activeDrag = false;
+
+tabmenu.addEventListener("mousemove", (drag) => {
+  if (!activeDrag) return;
+  tabmenu.scrollLeft -= drag.movementX;
+  IconVisibility();
+  tabmenu.classList.add("dragging");
+});
+
+document.addEventListener("mouseup", () => {
+  activeDrag = false;
+  tabmenu.classList.remove("dragging");
+});
+
+tabmenu.addEventListener("mousedown", (drag) => {
+  activeDrag = true;
+});
+
+const tabs = document.querySelectorAll(".tab");
+const tabbtns = document.querySelectorAll(".tab-btn");
+
+const tab_Nav = function (tabbtnClick) {
+  tabbtns.forEach((tabbtn) => {
+    tabbtn.classList.remove("active");
+  });
+
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  tabbtns[tabbtnClick].classList.add("active");
+  tabs[tabbtnClick].classList.add("active");
+};
+
+tabbtns.forEach((tabbtn, i) => {
+  tabbtn.addEventListener("click", () => {
+    tab_Nav(i);
+  });
+});

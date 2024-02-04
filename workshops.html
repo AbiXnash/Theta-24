@@ -7,8 +7,26 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="icon" href="\assets\img\Theta.jpg">
+      <style>
+        :root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+  
+      </style>
 
       <title>Theta 2k24 | Workshops</title>
    </head>
@@ -17,10 +35,8 @@
       <header class="header">
         <nav class="nav container">
            <div class="nav__data">
-              <a href="index.html" class="nav__logo">
-                 <i class="ri-planet-line"></i> Theta 2k24
-              </a>
               
+              <img class="nav__logo" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
               <div class="nav__toggle" id="nav-toggle">
                  <i class="ri-menu-line nav__burger"></i>
                  <i class="ri-close-line nav__close"></i>
@@ -34,7 +50,7 @@
 
                  <li><a href="timeline.html" class="nav__link">Timeline</a></li>
 
-                 <li><a href="crew.html" class="nav__link">Crew</a></li>
+                 <!-- <li><a href="crew.html" class="nav__link">Crew</a></li> -->
 
                  <!--=============== DROPDOWN 1 ===============-->
                  <li class="dropdown__item" id="registrationDropdown">
@@ -70,90 +86,193 @@
         </nav>
      </header>
 
-     <section class="card-container">
-        <ul class="tabs">
-            <li class="tab" onclick="showEvents('all')">All</li>
-            <li class="tab" onclick="showEvents(1)">Day 1</li>
-            <li class="tab" onclick="showEvents(2)">Day 2</li>
-            <li class="tab" onclick="showEvents(3)">Day 3</li>
-        </ul>
-    
-        <div class="events-container" id="events-container">
-            <!-- Events will be dynamically added here based on the selected day -->
-        </div>
-    
-        <script>
-
-            const eventData = {
-                1: [
-                    { date: '2024-01-21', title: 'sdfdfsdfdsfsdfsd ddf', link: '#' },
-                    { date: '2024-01-21', title: 'Event 2', link: 'https://chat.openai.com/c/c3ea65d5-b0ad-47e5-a2bd-603fb5cd723e' },
-
-                ],
-                2: [
-                    { date: '2024-01-22', title: 'ssssss', note: 'lorem sdf df sdg we her twsdsdf afda adasdsad sdsdfsdf wqe d s rq sd fd fe fsd fsdfdsfsd fsdfds fsdf sdf'},
-
-                ],
-                3: [
-                    { date: '2024-01-23', title: 'Event 5'},
-            ],
-            };
-    
-            function showEvents(day) {
-                const eventsContainer = document.getElementById('events-container');
-                const tabs = document.querySelectorAll('.tab');
-
-                tabs.forEach(tab => tab.classList.remove('active'));
-                
-                if (day === 'all') {
-                    const allEvents = Object.values(eventData).flat();
-                    displayEvents(allEvents);
-                    tabs[0].classList.add('active'); 
-                } else {
-                    const events = eventData[day];
-                    displayEvents(events);
-                    tabs[day].classList.add('active');
-                }
-            }
-
-    function displayEvents(events) {
-        const eventsContainer = document.getElementById('events-container');
-        eventsContainer.innerHTML = '';
-
-        events.forEach(event => {
-            const card = document.createElement('div');
-            card.classList.add('event-card');
-            card.innerHTML = `
-                <h2>${event.title}</h2>
-                <div>
-                    <p class="date">${event.date}</p>
-                    <p class="description">${event.note}</p>
+     <section style="margin-top: 150px;">
+      <h2 style="font-size: 3rem; color: white;">Workshops</h2>
+        <ul class="cards">
+            <li>
+              <a href="workshops/informatica.html" class="card">
+                <img src="\assets\Cluster Logos\Informatica.png" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Informatica</h3>            
+                      <span class="card__status">It’s Not a Bug, It’s a Feature</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Informatica Cluster: A dynamic code nexus where algorithms dance, innovation thrives, fostering interdisciplinary collaboration and groundbreaking solutions. More than lines of code, it's a resilient community shaping tomorrow's world through continuous learning, leveraging coding concepts, and digital pioneering.
+                  </p>
                 </div>
-                <a href="${event.link}" class="register-button">Register</a>
-            `;
-            eventsContainer.appendChild(card);
-        });
-    }
-            showEvents('all');
-        </script>
+              </a>      
+            </li>
+            <li>
+              <a href="workshops/equilibria.html" class="card">
+                <img src="\assets\Cluster Logos\Equilibria.png" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Equilibria</h3>            
+                      <span class="card__status">எண்திசை எங்கும் எம் தமிழ்</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Equilibria is the vibrant community celebrating Tamil culture through various cultural events like essay writings,script writings, elocutions and language workshops.Join us to immerse yourself in the richness of Tamil heritage.
+                    “வேற்றுமை இன்றி ழகரம் பழகுவோம்”                    
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="workshops/biogenesis.html" class="card">
+                <img src="assets\Cluster Logos\BIOGENESIS1(2).png" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\Cluster Logos\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Biogenesis</h3>            
+                      <span class="card__status">Unzipping the mystery of universe</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Biogenesis is a community of passionate individuals exploring the wonders of life sciences through workshops,hands-on experiments and events. Join us to cultivate your curiosity, engage in scientific exploration, and connect with fellow biology enthusiasts.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="workshops/access-america.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Access America</h3>            
+                      <span class="card__status">Language nexus :Where Words Come Alive, Ideas Take Flight.</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Immerse yourself in the power of language, explore literary realms, and unleash your creativity. This cluster also features Workshops for a holistic transformation of self-expression.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="workshops/mathematica.html" class="card">
+                <img src="assets\Cluster Logos\Mathematica.png" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Mathematica</h3>            
+                      <span class="card__status">From formulae to future : Navigating the World through maths</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Mathematica : Turning Complexity into Clarity . To celebrate the beauty of mathematics and compete with like-minded enthusiasts. Join us for a day of mathematical exploration, camaraderie, and the chance to emerge as a champion in the world of numbers and logic.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            
+            <li>
+              <a href="workshops/robotics.html" class="card">
+                <img src="assets\img\Robotics.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Robotics</h3>            
+                      <span class="card__status">Future unlimited!
+                        Make it happen, Mission with passion - Robotic Fusion
+                       </span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    To facilitate students to understand, design, and learn robotics. Provide interested students with opportunities to participate in competitive robotic events to unleash their skills, knowledge, creativity, and teamwork through conceptualizing and programming robots.
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+            <li>
+              <a href="workshops/electronica.html" class="card">
+                <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                    <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                    <div class="card__header-text">
+                      <h3 class="card__title">Electronica</h3>            
+                      <span class="card__status">Electrify Your Skills, Amplify Your Future</span>
+                    </div>
+                  </div>
+                  <p class="card__description">
+                    Join our Electronica Cluster for cool tech stuff! We've got workshops, competitions, and experts sharing smart ideas in electronics and communication – it's like a party for technology fans!
+                  </p>
+                  
+                </div>
+              </a>      
+            </li>
+              <li>
+                <a href="workshops/strategia.html" class="card">
+                  <img src="assets\img\Theta Black.jpg" class="card__image" alt="" />
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                      <div class="card__header-text">
+                        <h3 class="card__title">Strategia</h3>            
+                        <span class="card__status">Empowering Commerce Connecting communities</span>
+                      </div>
+                    </div>
+                    <p class="card__description">Our mission is to empower businesses and individuals by providing them with the tools and resources they need to thrive in the modern economy. Through our platform, we aim to connect communities, facilitate trade, and foster collaboration. We believe that by enabling commerce and creating connections, we can drive economic growth and create opportunities for everyone.</p>
+                  </div>
+                </a>      
+              </li><li>
+                <a href="workshops/optica.html" class="card">
+                  <img height="1260" src="assets\Cluster Logos\Optica.png" class="card__image" alt="" />
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img class="card__thumb" src="assets\img\Theta.jpg" alt="" />
+                      <div class="card__header-text">
+                        <h3 class="card__title">Optica</h3>            
+                        <span class="card__status">Exploring the Boundaries of Reality through Physics.</span>
+                      </div>
+                    </div>
+                    <p class="card__description">Welcome to our science society.Join with us for captivating discussions  and a journey through the depths of physics from quantum mechanics to cosmology. “Let's unravel the secrets of the universe together".</p>
+                  </div>
+                </a>      
+              </li>
+          </ul>
      </section>
 
-      <footer >
-         <div class="footer-content">
-           <a href="index.html" class="nav__logo">
-             <i class="ri-planet-line"></i> Theta 2k24
-           </a>
-           <h2 class="dates"> March 29 - March 31, 2024 </h2>
-             <ul class="socials">
-                 <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
-                 <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
-                 <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
-             </ul>
-         </div>
-         <div class="footer-bottom">
-             <p>copyright &copy;2024. Designed by <span>ABX</span></p>
-         </div>
-     </footer>
+ <footer >
+    <div class="footer-content">
+     <img class=" nav__logo nav__logo_footer" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
+      <h2 class="dates"> March 29 - March 31, 2024 </h2>
+        <ul class="socials" >
+            <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2024. Designed by <span>ABX</span></p>
+    </div>
+</footer>
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
    </body>
