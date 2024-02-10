@@ -1497,6 +1497,8 @@ body {
   text-transform: uppercase;
 }
 
+
+
 .event .event-right .event-timing,
 .event .event-right button {
   background: rgba(247, 255, 4, 0.519);
@@ -2103,7 +2105,7 @@ h2 {
   border-radius: 10px;
 }
 
-.workshop-section .register-btn {
+.register-btn {
   text-align: center;
 }
 
