@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="../assets/css/styles.css">
+
+      <style>
+         
+        img {
+         height: 360px;
+         width: 360px;
+        }
+
+        @media screen and (max-width: 450px) {
+         img {
+         height: 300px;
+         width: 300px;
+        }
+        }
+        @media screen and (max-width: 378px) {
+         img {
+         height: 250px;
+         width: 250px;
+        }
+        }
+      </style>
+
+      <title>Theta 2k24 | Optica </title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               
+               <img class="nav__logo" src="..\assets\img\Logo final without bg.png" alt="Theta 2k24">
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="../index.html" class="nav__link">Home</a></li>
+
+                  <li><a href="../timeline.html" class="nav__link">Timeline</a></li>
+
+                  <!-- <li><a href="crew.html" class="nav__link">Crew</a></li> -->
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item" id="registrationDropdown">
+                     <div class="nav__link" onclick="toggleDropdown()">
+                        Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu" id="registrationMenu">
+                        <li>
+                           <a href="../workshops.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Workshops
+                           </a>                          
+                        </li>
+
+                        <!-- <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Coming Soon
+                           </a>
+                        </li> -->
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <a href="../events.html" class="dropdown__link">
+                              <i class="ri-bar-chart-line"></i> On-Theta Events
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="../contact.html" class="nav__link">Contact</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <section class="workshop-section" style="color: white; margin-top: 120px;">
+        <div class="tagline-description">
+         <h2 style="font-size: 3rem"> OPTICA </h2>
+            <q> 
+               Exploring the Boundaries of Reality through Physics
+            </q>
+            <p>
+               Welcome to our science society. Join with us for captivating discussions and a journey through the depths of physics from quantum mechanics to cosmology. <br> "Let's unravel the secrets of the Universe together."
+            </p>
+        </div>
+        <div class="center-hr">
+            <hr>
+        </div>
+        <div style="display: block;" class="theta">
+            <div class="theta-row">
+               <section class="theta-date">
+                  <span class="theta-span">March 13 2024</span>
+                  <img   src="\assets\img\clip-137.png" alt="">
+               </section>
+               <section class="theta-line">
+                  <span class="theta-span"></span>
+               </section>
+               <div class="ag-courses_item">
+                <div href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg" style="background-color: #3ecd5e;"></div>
+          
+                  <div class="ag-courses-item_title" >
+                     What's Next???
+                    <p style="font-size: 1rem; line-height: 1; font-weight: normal"> <br>
+                    </p>
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                    <div class="register-btn">
+                        <button class="button-85" role="button">&nbsp;&nbsp;&nbsp;&nbsp;<b>Register</b>  &nbsp;&nbsp;&nbsp; </button> 
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+           
+
+
+      </section>
+
+      <footer>
+        <div class="footer-content">
+         <img class=" nav__logo nav__logo_footer" src="..\assets\img\Logo final without bg.png" alt="Theta 2k24">
+          <h2 class="dates"> March 29 - March 31, 2024 </h2>
+            <ul class="socials" >
+                <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024. Designed by <span>ABX</span></p>
+        </div>
+    </footer>
+      <!--=============== MAIN JS ===============-->
+      <script src="../assets/js/main.js"></script>
+   </body>
+</html>
