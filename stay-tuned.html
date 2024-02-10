@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@600&family=VT323&display=swap");
+
+/*
+font-family: 'M PLUS 1 Code', sans-serif;
+font-family: 'VT323', monospace;
+*/
+
+:root {
+  --bck: #000000;
+  --font: rgb(241, 241, 241);
+  --glitch1: hsl(214, 50%, 52%);
+  --glitch2: hsl(9, 50%, 52%);
+  --glitch3: hsl(61, 50%, 52%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bck);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 10rem;
+  font-family: "VT323", monospace;
+  text-shadow: 6px 4px var(--glitch2), 5px -5px var(--glitch1),
+    2px -4px var(--glitch3);
+  animation: glitch 0.5s infinite;
+}
+
+#txt::after {
+  content: "";
+  position: absolute;
+  height: 0.3rem;
+  width: 100%;
+  background: var(--bck);
+  bottom: 0;
+  left: 0;
+  transform: translateY(10px);
+  animation: line 0.4s infinite;
+  box-shadow: 0px 0px 2px 2px var(--bck);
+}
+#txt::before {
+  content: "";
+  position: absolute;
+  height: 0.3rem;
+  width: 100%;
+  background: var(--bck);
+  bottom: 0;
+  left: 0;
+  animation: lineTwo 0.9s infinite;
+  box-shadow: 0px 0px 4px 3px var(--bck);
+}
+#txt {
+  position: relative;
+  transform: translateX(5px, 3px);
+  animation: move 0.8s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 6px 4px var(--glitch2), 5px -5px var(--glitch1),
+      2px -4px var(--glitch3);
+  }
+  1% {
+    text-shadow: -2px 0px var(--glitch2), -5px 5px var(--glitch1),
+      2px 4px var(--glitch3);
+  }
+  19% {
+    text-shadow: -2px 0px var(--glitch2), -5px 5px var(--glitch1),
+      2px 4px var(--glitch3);
+  }
+  20% {
+    text-shadow: -4px 4px var(--glitch2), 3px 3px var(--glitch1),
+      -2px 4px var(--glitch3);
+  }
+  39% {
+    text-shadow: -4px 4px var(--glitch2), 3px 3px var(--glitch1),
+      -2px 4px var(--glitch3);
+  }
+  40% {
+    text-shadow: 1px -1px var(--glitch2), -1px 5px var(--glitch1),
+      6px -3px var(--glitch3);
+  }
+  59% {
+    text-shadow: 1px -1px var(--glitch2), -1px 5px var(--glitch1),
+      6px -3px var(--glitch3);
+  }
+  60% {
+    text-shadow: -5px -4px var(--glitch2), -4px 4px var(--glitch1),
+      -3px 3px var(--glitch3);
+  }
+  79% {
+    text-shadow: -5px -4px var(--glitch2), -4px 4px var(--glitch1),
+      -3px 3px var(--glitch3);
+  }
+  80% {
+    text-shadow: -4px 4px var(--glitch2), 3px 3px var(--glitch1),
+      -2px 4px var(--glitch3);
+  }
+  99% {
+    text-shadow: -4px 4px var(--glitch2), 3px 3px var(--glitch1),
+      -2px 4px var(--glitch3);
+  }
+}
+
+@keyframes line {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-110px);
+  }
+}
+
+@keyframes lineTwo {
+  0% {
+    transform: translateY(10px);
+  }
+  48% {
+    transform: translateY(-110px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-110px);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(5px, 3px);
+  }
+  25% {
+    transform: translate(-4px, 1px);
+  }
+  50% {
+    transform: translate(3px, -4px);
+  }
+  75% {
+    transform: translate(-3px, 4px);
+  }
+  99% {
+    transform: translate(5px, 3px);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /* Noch größer, noch mehr Regeln */
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+    </style>
+    <title>Stay Tuned!</title>
+</head>
+<body>
+    <div id="main">
+        <div id="txt">
+          <h1>STAY TUNED</h1>
+          <!--
+      !write yout text in the h1-tag!
+      -->
+        </div>
+      </div>
+</body>
+</html>
