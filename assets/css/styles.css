@@ -462,7 +462,7 @@ footer .footer-content .dates {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 #time {
@@ -652,10 +652,18 @@ body {
   font-size: small;
   color: #b9b9b9;
 }
+@media only screen and (min-width: 768px) {
+  .btn-container {
+    margin-bottom: 30px;
+  }
+  .body-container {
+    margin-top: -200px;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .body-container {
-    margin-top: -300px;
+    margin-top: -400px;
     font-size: 14px;
     min-height: 40vh;
   }
@@ -1398,11 +1406,11 @@ body {
   }
 }
 
-.glitch span {
+.glitcher span {
   animation: paths 5s step-end infinite;
 }
 
-.glitch::before {
+.glitcher::before {
   animation:
     paths 5s step-end infinite,
     opacity 5s step-end infinite,
@@ -1410,7 +1418,7 @@ body {
     movement 10s step-end infinite;
 }
 
-.glitch::after {
+.glitcher::after {
   animation:
     paths 5s step-end infinite,
     opacity 5s step-end infinite,
