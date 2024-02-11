@@ -1744,7 +1744,7 @@ h2 {
 }
 
 .contact-grid {
-  padding-top: 150px;
+  padding-top: 50px;
   color: #fff; /* Change text color to white */
   display: flex;
   flex-wrap: wrap;
@@ -2422,7 +2422,7 @@ q {
 
 
 .ul {
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 150px;
 --col-gap: 2rem;
 --row-gap: 2rem;
