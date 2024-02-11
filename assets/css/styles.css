@@ -2721,7 +2721,7 @@ bottom: 0.25rem;
   filter: blur(50px);
 }
 
-button {
+.instagram, .linkedin, .youtube {
   position: relative;
   width: 130px;
   height: 35px;
@@ -2841,9 +2841,9 @@ button:active {
   /* border: 3px solid rgb(0, 255, 213); */
 }
 
-.glitch:hover {
-  /* text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8; */
-}
+/* .glitch:hover {
+  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+} */
 
 .glitch:hover {
   background-color: transparent;
