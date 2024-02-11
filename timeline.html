@@ -1,589 +1,356 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="icon" href="assets\img\Theta.jpg">
+            <style>
+                @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="icon" href="assets\img\Theta.jpg">
-      
-      <style>
-        .event span {
-            color: rgb(255, 140, 25);
-        }
-      </style>
-      
-      <title>Theta 2k24 | Timeline</title>
-   </head>
-   <body>
-      <!--=============== HEADER ===============-->
-      <header class="header">
-        <nav class="nav container">
-           <div class="nav__data">
-              
-              <img class="nav__logo" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
-              <div class="nav__toggle" id="nav-toggle">
-                 <i class="ri-menu-line nav__burger"></i>
-                 <i class="ri-close-line nav__close"></i>
-              </div>
-           </div>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-           <!--=============== NAV MENU ===============-->
-           <div class="nav__menu" id="nav-menu">
-              <ul class="nav__list">
-                 <li><a href="index.html" class="nav__link">Home</a></li>
+body {
+  --color: #fff;
+  --bgColor: #111;
+}
 
-                 <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+h1 {
+  text-align: center;
+}
 
-                 <!-- <li><a href="crew.html" class="nav__link">Crew</a></li> -->
+@media (max-width: 560px) {
+  h2 {
+    font-size:3rem;
+  }
+}
+.animated-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 11px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: greenyellow;
+  box-shadow: 0 0 0 2px greenyellow;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-                 <!--=============== DROPDOWN 1 ===============-->
-                 <li class="dropdown__item" id="registrationDropdown">
-                    <div class="nav__link" onclick="toggleDropdown()">
-                       Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                    </div>
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: greenyellow;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-                    <ul class="dropdown__menu" id="registrationMenu">
-                       <li>
-                          <a href="workshops.html" class="dropdown__link">
-                             <i class="ri-pie-chart-line"></i> Workshops
-                          </a>                          
-                       </li>
+.animated-button .arr-1 {
+  right: 16px;
+}
 
-                       <!-- <li>
-                          <a href="#" class="dropdown__link">
-                             <i class="ri-arrow-up-down-line"></i> Coming Soon
-                          </a>
-                       </li> -->
+.animated-button .arr-2 {
+  left: -25%;
+}
 
-                       <!--=============== DROPDOWN SUBMENU ===============-->
-                       <li class="dropdown__subitem">
-                          <a href="stay-tuned.html" class="dropdown__link">
-                             <i class="ri-bar-chart-line"></i> On-Theta Events
-                          </a>
-                       </li>
-                    </ul>
-                 </li>
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-                 <li><a href="contact.html" class="nav__link">Contact</a></li>
-              </ul>
-           </div>
-        </nav>
-     </header>
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.ul span {
+  color: rgb(255, 225, 31);
+}
+
+            </style>
         
-      <section class="event-container">
-        
+        <title>Theta 2k24 | Timeline</title>
+     </head>
+     <body>
+      <span class="loader"></span>
 
-        <h3 class="event-month">
-            February 
-        </h3>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        14
-                    </div>
-                    <div class="day">
-                        Wed
-                    </div>
+        <!--=============== HEADER ===============-->
+        <header class="header">
+          <nav class="nav container">
+             <div class="nav__data">
+                
+                <img class="nav__logo" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
+                <div class="nav__toggle" id="nav-toggle">
+                   <i class="ri-menu-line nav__burger"></i>
+                   <i class="ri-close-line nav__close"></i>
                 </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    One Day Workshop on Robotics
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Robotics</span> 
-                    <hr>
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/robotics.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
+             </div>
+  
+             <!--=============== NAV MENU ===============-->
+             <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                   <li><a href="index.html" class="nav__link">Home</a></li>
+  
+                   <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+  
+                   <!-- <li><a href="crew.html" class="nav__link">Crew</a></li> -->
+  
+                   <!--=============== DROPDOWN 1 ===============-->
+                   <li class="dropdown__item" id="registrationDropdown">
+                      <div class="nav__link" onclick="toggleDropdown()">
+                         Registration <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                      </div>
+  
+                      <ul class="dropdown__menu" id="registrationMenu">
+                         <li>
+                            <a href="workshops.html" class="dropdown__link">
+                               <i class="ri-pie-chart-line"></i> Workshops
+                            </a>                          
+                         </li>
+  
+                         <!-- <li>
+                            <a href="#" class="dropdown__link">
+                               <i class="ri-arrow-up-down-line"></i> Coming Soon
+                            </a>
+                         </li> -->
+  
+                         <!--=============== DROPDOWN SUBMENU ===============-->
+                         <li class="dropdown__subitem">
+                            <a href="stay-tuned.html" class="dropdown__link">
+                               <i class="ri-bar-chart-line"></i> On-Theta Events
+                            </a>
+                         </li>
+                      </ul>
+                   </li>
+  
+                   <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+             </div>
+          </nav>
+       </header>
 
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        15
-                    </div>
-                    <div class="day">
-                        Thurs
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Decode the Interview 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Informatica</span>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 3:00 pm
-                    </div>
-                    <a class="button-85" href="workshops/informatica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
+    <h2 style="margin-top: 200px; color: white; font-size: 3rem;">Timeline</h2>
+<ul class="ul">
+    <li style="--accent-color:#3a6cc3">
+        <div class="date">Feb 14, 2024</div>
+        <div class="title">One Day Workshop on Robotics<hr></div>
+        <div class="descr"> Conducted by <span>Robotics</span> </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/robotics.html"  > Register <i class="fa fa-caret-right"></i> </a>
+          
         </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        15
-                    </div>
-                    <div class="day">
-                        Thurs
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Henna Fairy 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Mathematica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing" style="width: 110px;">
-                        <i class ="fa fa-clock-o"></i> 10:00 am
-                    </div>
-                    <a class="button-85" href="workshops/mathematica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
+      </li>
+    <li style="--accent-color:#ffbf0f">
+        <div class="date"> Feb 15, 2024</div>
+        <div class="title">Decode the Interview<hr></div>
+        <div class="descr">  Conducted by <span>Informatica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#ed2049;">
+        <div class="date">Feb 15, 2024</div>
+        <div class="title">Henna Fairy<hr></div>
+        <div class="descr">  Conducted by <span> Mathematica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/mathematica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#1f8ed9">
+        <div class="date">Feb 16, 2024</div>
+        <div class="title">Recent Trends in Technology and Evolution in Placement<hr></div>
+        <div class="descr">   Conducted by <span>Electronica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/electronica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#3be2e2">
+        <div class="date">Feb 19, 2024</div>
+        <div class="title">Beauty Blush<hr></div>
+        <div class="descr">   Conducted by <span>Access America</span>   </div>
+        <div class="register-btn">
+            <a class="button-85" href="workshops/access-america.html"  > Register <i class="fa fa-caret-right"></i> </a>
+        </div> 
+    </li>
 
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        16
-                    </div>
-                    <div class="day">
-                        Fri
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Recent trends in technology and evolution in Placement 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Electronica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/electronica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        19
-                    </div>
-                    <div class="day">
-                        Mon
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Beauty Blush 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Access America</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 8:45 am
-                    </div>
-                    <a class="button-85" href="workshops/access-america.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        20
-                    </div>
-                    <div class="day">
-                        Tues
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    What's Next?? 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Optica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/optica.html"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        23
-                    </div>
-                    <div class="day">
-                        Fri
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    SHIKSHA - One day Workshop on Life skill 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Strategia</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:30 am
-                    </div>
-                    <a class="button-85" href="workshops/strategia.html"> Register</a>
-                </div>
-            </div>
-        </div>
+    <li style="--accent-color:#3a6cc3">
+        <div class="date">Feb 20, 2024</div>
+        <div class="title">What's Next???<hr></div>
+        <div class="descr"> Conducted by <span>Optica</span> </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/optica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#ffbf0f">
+        <div class="date"> Feb 23, 2024</div>
+        <div class="title">Shiksha - One Day Workshop on Life Skills<hr></div>
+        <div class="descr"> Conducted by <span>Strategia</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/strategia.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#ed2049">
+        <div class="date">Feb 24, 2024</div>
+        <div class="title">One Day Hands-on Workshop on FPGA<hr></div>
+        <div class="descr">  Conducted by <span>Electronica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/electronica.html"  > Register <i class="fa fa-caret-right"></i>  <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#1f8ed9">
+        <div class="date">Feb 26, 2024</div>
+        <div class="title">Oracle Apex<hr></div>
+        <div class="descr">   Conducted by <span>Informatica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#3be2e2">
+        <div class="date">Feb 27, 2024</div>
+        <div class="title">Enhancing Entrepreneurship through Hands-on Training<hr></div>
+        <div class="descr">   Conducted by <span>Equilibria</span>   </div>
+        <div class="register-btn">
+            <a class="button-85" href="workshops/equilibria.html"  > Register <i class="fa fa-caret-right"></i> </a>
+        </div> 
+    </li>
 
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        24
-                    </div>
-                    <div class="day">
-                        Sat
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    One day Hands-on Workshop on FPGA 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Electronica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/electronica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        26
-                    </div>
-                    <div class="day">
-                        Mon
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Oracle Apex 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Informatica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/informatica.html" onclick="redirectTo(this)"> Register</a>
+    <li style="--accent-color:#3a6cc3">
+        <div class="date">Feb 28, 2024</div>
+        <div class="title">AR/VR<hr></div>
+        <div class="descr"> Conducted by <span>Informatica</span> </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#ffbf0f">
+        <div class="date"> March 08, 2024</div>
+        <div class="title">Art of Self-Defence<hr></div>
+        <div class="descr"> Conducted by <span>Access America</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/access-america.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#ed2049">
+        <div class="date">March 08, 2024</div>
+        <div class="title">Ethical Hacking<hr></div>
+        <div class="descr">  Conducted by <span>Informatica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#1f8ed9">
+        <div class="date">March 11, 2024</div>
+        <div class="title">Mobile App Development<hr></div>
+        <div class="descr">   Conducted by <span>Informatica</span>  </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#3be2e2">
+        <div class="date">March 13, 2024</div>
+        <div class="title">Bio Expo 2k24<hr></div>
+        <div class="descr">      </div>
+        <div class="register-btn">
+            <a class="button-85" href="workshops/biogenesis.html"  > Register <i class="fa fa-caret-right"></i> </a>
+        </div> 
+    </li>
 
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        27
-                    </div>
-                    <div class="day">
-                        Tues
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Enhancing Entrepreneurship through hands-on Training 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Equilibria</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 10:00 am
-                    </div>
-                    <a class="button-85" href="workshops/equilibria.html"> Register</a>
-                </div>
-            </div>
-        </div>
+    <li style="--accent-color:#3a6cc3">
+        <div class="date">March 15, 2024</div>
+        <div class="title">Clay Play<hr></div>
+        <div class="descr"> Conducted by <span>Access America</span> </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/access-america.html"  > Register <i class="fa fa-caret-right"></i> </a>
+      </div>
+      </li>
+    <li style="--accent-color:#ffbf0f">
+        <div class="date"> March 23, 2024</div>
+        <div class="title">Dynamic Website Creation<hr></div>
+        <div class="descr">  Conducted by <span>Informatica</span> </div>
+        <div class="register-btn">
+          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
+          
+      </div>
+      </li>
+    
 
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        28
-                    </div>
-                    <div class="day">
-                        Wed
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    AR/VR 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Informatica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/informatica.html" onclick="redirectTo(this)"> Register</a>
 
-                </div>
-            </div>
-        </div>
-
-        <h3 class="event-month">
-            March
-        </h3>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        08
-                    </div>
-                    <div class="day">
-                        Fri
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Art of Self-Defence 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Access America</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 8:45 am
-                    </div>
-                    <a class="button-85" href="workshops/access-america.html"> Register</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        08
-                    </div>
-                    <div class="day">Fri
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Ethical Hacking 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Informatica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/informatica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        11
-                    </div>
-                    <div class="day">
-                        Mon
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Mobile App Development 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Informatica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/informatica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        13
-                    </div>
-                    <div class="day">
-                        Wed
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Bio Expo 2k24 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Biogenesis</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/biogenesis.html"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        15
-                    </div>
-                    <div class="day">
-                        Fri
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Clay Play 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Access America</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 8:45 am
-                    </div>
-                    <a class="button-85" role="a" href="/workshops/access-america.html"> Register</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-left">
-                <div class="event-date">
-                    <div class="date">
-                        23
-                    </div>
-                    <div class="day">
-                        Sat
-                    </div>
-                </div>
-            </div>
-            <div class="event-right">
-                <h3 class="event-title">
-                    Dynamic Website Creation 
-                </h3>
-                <div class="event-description">
-                    Cluster: <span>Informatica</span> <br>
-                    <hr>
-                     
-                </div>
-                <div class="event-details">
-                    <div class="event-timing">
-                        <i class ="fa fa-clock-o"></i> 9:00 am
-                    </div>
-                    <a class="button-85" href="workshops/informatica.html" onclick="redirectTo(this)"> Register</a>
-                </div>
-            </div>
-        </div>
-
-      </section>
-
-      <footer >
-        <div class="footer-content">
-         <img class=" nav__logo nav__logo_footer" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
-          <h2 class="dates"> March 29 - March 31, 2024 </h2>
-            <ul class="socials" >
-                <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2024. Designed by <span>ABX</span></p>
-        </div>
-    </footer>
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+      
+</ul>
+<footer >
+    <div class="footer-content">
+     <img class=" nav__logo nav__logo_footer" src="assets\img\Logo final without bg.png" alt="Theta 2k24">
+      <h2 class="dates"> March 29 - March 31, 2024 </h2>
+        <ul class="socials" >
+            <li><a href="https://www.instagram.com/theta_2k24_official/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@TeamEmulsion"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.sastra.edu/"><i class="fa fa-share"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2024. Designed by <span>ABX</span></p>
+    </div>
+</footer>
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
 </html>
