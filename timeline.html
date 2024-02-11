@@ -127,6 +127,127 @@ h1 {
   color: rgb(255, 225, 31);
 }
 
+.ul .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.ul .container .btn {
+  height: 50px;
+  margin: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 155px;
+}
+
+.ul .container .btn a {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.ul .container .btn:hover a {
+  letter-spacing: 2px;
+}
+
+.ul .container .btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left,
+                rgba(255,255,255,0.15),
+                transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.ul .container .btn:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.ul .container .btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 10px;
+  width: 30px;
+  background: rgb(63, 238, 10);
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.ul .container .btn:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.ul .container .btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  height: 10px;
+  width: 30px;
+  background: rgb(7, 245, 59);
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.ul .container .btn:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.ul .container .btn:nth-child(1):before,
+.ul .container .btn:nth-child(1)::after {
+  background: #0cf318;
+  box-shadow: 0 0 5px #0ffb2e,
+    0 0 15px #2bff59,
+    0 0 30px #32ff2b,
+    0 0 60px #22ff47;
+}
+
+.ul .container .btn:active a {
+  color: #000;
+}
+
+
             </style>
         
         <title>Theta 2k24 | Timeline</title>
@@ -195,83 +316,83 @@ h1 {
         <div class="date">Feb 14, 2024</div>
         <div class="title">One Day Workshop on Robotics<hr></div>
         <div class="descr"> Conducted by <span>Robotics</span> </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/robotics.html"  > Register <i class="fa fa-caret-right"></i> </a>
-          
-        </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
+      
       </li>
     <li style="--accent-color:#ffbf0f">
         <div class="date"> Feb 15, 2024</div>
         <div class="title">Decode the Interview<hr></div>
         <div class="descr">  Conducted by <span>Informatica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="../workshops/informatica.html">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#ed2049;">
         <div class="date">Feb 15, 2024</div>
         <div class="title">Henna Fairy<hr></div>
         <div class="descr">  Conducted by <span> Mathematica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/mathematica.html"> Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#1f8ed9">
         <div class="date">Feb 16, 2024</div>
         <div class="title">Recent Trends in Technology and Evolution in Placement<hr></div>
         <div class="descr">   Conducted by <span>Electronica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/electronica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#3be2e2">
         <div class="date">Feb 19, 2024</div>
         <div class="title">Beauty Blush<hr></div>
         <div class="descr">   Conducted by <span>Access America</span>   </div>
-        <div class="register-btn">
-            <a class="button-85" href="workshops/access-america.html"  > Register <i class="fa fa-caret-right"></i> </a>
-        </div> 
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div> 
     </li>
 
     <li style="--accent-color:#3a6cc3">
         <div class="date">Feb 20, 2024</div>
         <div class="title">What's Next???<hr></div>
         <div class="descr"> Conducted by <span>Optica</span> </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/optica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#ffbf0f">
         <div class="date"> Feb 23, 2024</div>
         <div class="title">Shiksha - One Day Workshop on Life Skills<hr></div>
         <div class="descr"> Conducted by <span>Strategia</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/strategia.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#ed2049">
         <div class="date">Feb 24, 2024</div>
         <div class="title">One Day Hands-on Workshop on FPGA<hr></div>
         <div class="descr">  Conducted by <span>Electronica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/electronica.html"  > Register <i class="fa fa-caret-right"></i>  <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#1f8ed9">
         <div class="date">Feb 26, 2024</div>
         <div class="title">Oracle Apex<hr></div>
         <div class="descr">   Conducted by <span>Informatica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#3be2e2">
         <div class="date">Feb 27, 2024</div>
         <div class="title"> Grace and Gleam<hr></div>
         <div class="descr">   Conducted by <span>Equilibria</span>   </div>
-        <div class="register-btn">
-            <a class="button-85" href="workshops/equilibria.html"  > Register <i class="fa fa-caret-right"></i> </a>
-        </div> 
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div> 
     </li>
     <!-- <li style="--accent-color:#ed2049">
       <div class="date">Feb 27, 2024</div>
@@ -286,59 +407,56 @@ h1 {
         <div class="date">Feb 28, 2024</div>
         <div class="title">AR/VR<hr></div>
         <div class="descr"> Conducted by <span>Informatica</span> </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#ffbf0f">
         <div class="date"> March 08, 2024</div>
         <div class="title">Art of Self-Defence<hr></div>
         <div class="descr"> Conducted by <span>Access America</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/access-america.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#ed2049">
         <div class="date">March 08, 2024</div>
         <div class="title">Ethical Hacking<hr></div>
         <div class="descr">  Conducted by <span>Informatica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#1f8ed9">
         <div class="date">March 11, 2024</div>
         <div class="title">Mobile App Development<hr></div>
         <div class="descr">   Conducted by <span>Informatica</span>  </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#3be2e2">
         <div class="date">March 13, 2024</div>
         <div class="title">Bio Expo 2k24<hr></div>
         <div class="descr">      </div>
-        <div class="register-btn">
-            <a class="button-85" href="workshops/biogenesis.html"  > Register <i class="fa fa-caret-right"></i> </a>
-        </div> 
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div> 
     </li>
 
     <li style="--accent-color:#3a6cc3">
         <div class="date">March 15, 2024</div>
         <div class="title">Clay Play<hr></div>
         <div class="descr"> Conducted by <span>Access America</span> </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/access-america.html"  > Register <i class="fa fa-caret-right"></i> </a>
-      </div>
+        <div class="container">
+          <div class="btn"><a href="#">Register </a></div>
+       </div>
       </li>
     <li style="--accent-color:#ffbf0f">
         <div class="date"> March 23, 2024</div>
         <div class="title">Dynamic Website Creation<hr></div>
         <div class="descr">  Conducted by <span>Informatica</span> </div>
-        <div class="register-btn">
-          <a class="button-85" href="workshops/informatica.html"  > Register <i class="fa fa-caret-right"></i> </a>
-          
-      </div>
+        
       </li>
     
 
