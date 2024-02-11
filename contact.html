@@ -11,7 +11,139 @@
       <link rel="stylesheet" href="assets/css/styles.css">
       <link rel="icon" href="assets\img\Theta.jpg">
 
-      
+      <style>
+         :root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(225, 2%, 52%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+
+}
+
+h1:last-of-type {
+    color: var(--varyDarkBlue);
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+    background-color: white;
+}
+
+img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+@media (max-width: 950px) {
+
+
+    .box {
+        margin-top: 20px; /* Adjust as needed */
+    }
+
+    .red {
+        order: -1;
+    }
+
+    .cyan {
+        order: 1;
+    }
+
+    .box-down {
+        top: 0;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }
+
+    
+    
+}
+      </style>
+
       <title>Theta 2k24 | Contact</title>
    </head>
    <body>
@@ -71,8 +203,7 @@
       </header>
 
       
-      <section>
-         <h2 style="font-family: Josefin Sans;margin-top: 150px; color: white; font-size: 3rem;">Theta 2k24 / <span style="font-family: Josefin Sans;color:orange;"> &nbsp Contact</span></h2>
+      <!-- <section>
          <div class="contact-grid">
          
             <div class="contact-card">
@@ -91,12 +222,77 @@
                <p><strong>Phone: </strong>+91 794433 84450</p>
            </div>
         
-            <!-- <div class="contact-card">
+             <div class="contact-card">
                 <h2>Social Media</h2>
                 <p><strong>Instagram: </strong><a style="color: #FFD700;" href="#"> theta2k24_official</a></p>
                 <p><strong>LinkedIn: </strong><a style="color: #FFD700;" href="#"> linkedin.in/Theta</a></p>
-            </div> -->
+            </div>
         </div>
+      </section> -->
+
+      <section>
+         <h2 style="font-family: Josefin Sans;margin-top: 150px; color: white; font-size: 3rem;">Theta 2k24 / <span style="font-family: Josefin Sans;color:orange;"> &nbsp Contact</span></h2>
+
+         <div class="row1-container">
+            <div class="box box-down cyan">
+              <h2> President</h2>
+              <p>Deepakraj B</p>
+              <p>+91 95007 56675</p>
+              <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+              <button class="cta">
+               <span>Contact Us</span>
+               <svg width="15px" height="10px" viewBox="0 0 13 10">
+                 <path d="M1,5 L11,5"></path>
+                 <polyline points="8 1 12 5 8 9"></polyline>
+               </svg>
+             </button>
+            </div>
+        
+            <div class="box red">
+              <h2> Vice President</h2>
+              <p>Surya C</p>                                      
+              <p>+91 93606 17308</p> 
+              <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+              <button class="cta">
+               <span>Contact Us</span>
+               <svg width="15px" height="10px" viewBox="0 0 13 10">
+                 <path d="M1,5 L11,5"></path>
+                 <polyline points="8 1 12 5 8 9"></polyline>
+               </svg>
+             </button>
+            </div>
+        
+            <div class="box box-down blue">
+               <h2>Vice President</h2>
+               <p>Aishwarya Lakshmi S</p>
+               <p>+91 81228 23988</p>
+              <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+              <button class="cta">
+               <span>Contact Us</span>
+               <svg width="15px" height="10px" viewBox="0 0 13 10">
+                 <path d="M1,5 L11,5"></path>
+                 <polyline points="8 1 12 5 8 9"></polyline>
+               </svg>
+             </button>
+            </div>
+          </div>
+          <div class="row2-container">
+            <div class="box orange">
+              
+              <h2>Web Developer</h2>
+              <p>Abinash S</p>
+              <p>+91 93456 42528</p>
+              <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+              
+              <button class="cta">
+               <span>Contact Us</span>
+               <svg width="15px" height="10px" viewBox="0 0 13 10">
+                 <path d="M1,5 L11,5"></path>
+                 <polyline points="8 1 12 5 8 9"></polyline>
+               </svg>
+             </button>
+            </div>
+          </div>
       </section>
       
       
