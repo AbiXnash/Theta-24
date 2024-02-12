@@ -77,28 +77,6 @@ let x = setInterval(function () {
   }
 });
 
-/*=============== FOOTER ===============*/
-// document.addEventListener("DOMContentLoaded", function () {
-//   var body = document.body;
-//   var footer = document.querySelector("footer");
-
-//   function updateFooterVisibility() {
-//     var isFooterVisible =
-//       body.scrollHeight <= window.innerHeight + window.scrollY;
-
-//     // Update footer display property based on visibility
-//     footer.style.display = isFooterVisible ? "block" : "none";
-//   }
-
-//   // Update footer visibility on initial load
-//   updateFooterVisibility();
-
-//   // Update footer visibility on window resize
-//   window.addEventListener("resize", updateFooterVisibility);
-
-//   // Update footer visibility on scroll
-//   window.addEventListener("scroll", updateFooterVisibility);
-// });
 window.addEventListener("DOMContentLoaded", function () {
   adjustFooterPosition(); // Adjust footer position on page load
 });
