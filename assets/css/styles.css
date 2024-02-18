@@ -2657,7 +2657,7 @@ margin-bottom: var(--row-gap);
 grid-column: 2;
 --inlineP: 1.5rem;
 margin-inline: var(--inlineP);
-grid-row: span 2;
+/* grid-row: span 2; */
 display: grid;
 grid-template-rows: min-content min-content min-content;
 }
