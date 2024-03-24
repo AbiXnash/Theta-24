@@ -194,13 +194,7 @@ const eventData = {
   ],
   3: [
     {
-      cluster: "Cluster 1",
-      title: "Event 4",
-      note: "Event Description ",
-      url_sastra: "#",
-    },
-    {
-      note: "9:00 a.m. - :00 p.m. | Venue: Ground",
+      note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
       title: "Football",
       cluster: "Sportiva",
       url_sastra: "#",
