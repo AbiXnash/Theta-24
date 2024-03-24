@@ -2233,13 +2233,16 @@ h2 {
   line-height: 1.4;
 }
 
+
+
 /* CSS */
 .button-85 {
   margin: 0 10px;
-  padding: 0.65em;
+  padding: 0.75em;
   /* padding-left: 1em;
   padding-right: 1em; */
   border: none;
+  font-size: 15px;
   outline: none;
   color: rgb(255, 255, 255);
   background: #111;
