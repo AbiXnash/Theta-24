@@ -2236,9 +2236,9 @@ h2 {
 /* CSS */
 .button-85 {
   margin: 0 10px;
-  padding: 0.35em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0.65em;
+  /* padding-left: 1em;
+  padding-right: 1em; */
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
