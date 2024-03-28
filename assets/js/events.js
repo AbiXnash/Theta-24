@@ -7,21 +7,21 @@ const eventData = {
       url_sastra: "https://forms.gle/Q8o1XifpHidKCRCf7",
     },
     {
+      note: "2:00 p.m. - 5:00 p.m. | Venue: LAB-2",
+      title: "Code Hunt",
       cluster: "Informatica",
-      note: "9:00 a.m. - 12:00 p.m. | Venue: LAB-1",
-      title: "Idea-Verse",
       url_sastra:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfF0yv2tlPZ8f0N7hQo5lydYvLscF9rFH3ZXdMKlreb-5-DsA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSfhAL3NDZjZ13Ktm38590vUcHRBG0PN2RtqqWqYY6_rBViBCw/viewform?usp=sf_link",
     },
     {
       cluster: "Robotics",
-      note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
+      note: "9:30 a.m. - 1:30 p.m. | Venue: Basketball Court",
       title: "Robo-Saga",
       url_sastra: "https://forms.gle/3N3zva39iWfTzdGt8",
     },
     {
       cluster: "Access America",
-      note: "10:00 a.m. - 1:00 p.m. | Venue: 410",
+      note: "10:00 a.m. - 1:00 p.m. | Venue: 401",
       title: "Capture Caption Captivate",
       url_sastra: "https://forms.gle/LZJSXLRSCii6ZMq36",
     },
@@ -64,6 +64,8 @@ const eventData = {
       title: "Synapse Sculptors",
       url_sastra: "#",
     },
+  ],
+  2: [
     {
       cluster: "Informatica",
       note: "2:00 p.m. - 5:00 p.m. | Venue: LAB-1",
@@ -71,8 +73,6 @@ const eventData = {
       url_sastra:
         "https://docs.google.com/forms/d/e/1FAIpQLScZflZjhZwU9H7l8zLAr1ZDAC7meT_OSFo8h57Jp__FIKy2qg/viewform?usp=sf_link",
     },
-  ],
-  2: [
     {
       cluster: "Strategia",
       note: "9:00 a.m. - 12:00 p.m. | Venue: 309",
@@ -81,13 +81,13 @@ const eventData = {
     },
     {
       cluster: "Optica",
-      note: "9:30 a.m. - 12:00 p.m. | Venue: 310",
+      note: "2:00 a.m. - 4:30 p.m. | Venue: 504",
       title: "Squid Game",
       url_sastra: "https://forms.gle/paCBgei6fKpETQSX6",
     },
     {
       cluster: "Robotics",
-      note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
+      note: "9:30 a.m. - 1:30 p.m. | Venue: Basketball Court",
       title: "Robo-Saga",
       url_sastra: "https://forms.gle/3N3zva39iWfTzdGt8",
     },
@@ -106,7 +106,7 @@ const eventData = {
     },
     {
       cluster: "Informatica",
-      note: "10:00 a.m. - 1:00 p.m. | Venue: 402",
+      note: "10:00 a.m. - 1:00 p.m. | Venue: LAB-2",
       title: "Logic and Ladder",
       url_sastra:
         "https://docs.google.com/forms/d/e/1FAIpQLSdWnAZUFen29nYJb3qxIv3AUl3fpwmHCk2ldyFI7A2XsK6o0w/viewform?usp=sf_link",
@@ -131,12 +131,19 @@ const eventData = {
     },
     {
       cluster: "Optica",
-      note: "2:00 p.m. - 4:30 p.m. | Venue: 504",
-      title: "Cognitiva Cracking",
+      note: "9:30 p.m. - 12:00 p.m. | Venue: 310",
+      title: "Cognitive Cracking",
       url_sastra: "https://forms.gle/rmGPmSZY8ofZ9nYy8",
     },
   ],
   3: [
+    {
+      cluster: "Informatica",
+      note: "9:00 a.m. - 12:00 p.m. | Venue: LAB-1",
+      title: "Idea-Verse",
+      url_sastra:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfF0yv2tlPZ8f0N7hQo5lydYvLscF9rFH3ZXdMKlreb-5-DsA/viewform?usp=sf_link",
+    },
     {
       note: "10:00 a.m. - 1:00 p.m. | Venue: 501",
       title: "Roadies",
@@ -144,7 +151,7 @@ const eventData = {
       url_sastra: "https://forms.gle/Rzm45zC8EvS7r8HG6",
     },
     {
-      note: "10:00 a.m. - 1:00 p.m. | Venue: SRC",
+      note: "10:00 a.m. - 1:00 p.m. | Venue: 406",
       title: "Escape Room",
       cluster: "Electronica",
       url_sastra:
@@ -156,25 +163,18 @@ const eventData = {
       cluster: "Mathematica",
       url_sastra: "https://forms.gle/MeVcb4rAnVTQpb4D7",
     },
-    {
-      note: "11:00 a.m. - 12:00 p.m. | Venue: SRC",
-      title: "Humaniod Robots",
-      cluster: "Theta 2k24",
-      url_sastra: "#",
-    },
+    // {
+    //   note: "11:00 a.m. - 12:00 p.m. | Venue: SRC",
+    //   title: "Humaniod Robots",
+    //   cluster: "Theta 2k24",
+    //   url_sastra: "#",
+    // },
     {
       note: "1:00 p.m. - 3:00 p.m. | Venue: 416 ",
       title: "Fun Max",
       cluster: "Biogenesis",
       url_sastra:
         "https://docs.google.com/forms/d/e/1FAIpQLSeETGJtzLzilCXwn0ZBcYM-ZBh17FqUWzFcDbrjXb2O497Pdw/viewform?usp=sf_link",
-    },
-    {
-      note: "2:00 p.m. - 5:00 p.m. | Venue: 510",
-      title: "Code Hunt",
-      cluster: "Informatica",
-      url_sastra:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfhAL3NDZjZ13Ktm38590vUcHRBG0PN2RtqqWqYY6_rBViBCw/viewform?usp=sf_link",
     },
   ],
 };
