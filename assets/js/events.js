@@ -19,18 +19,6 @@ const eventData = {
       title: "Robo-Saga",
       url_sastra: "https://forms.gle/3N3zva39iWfTzdGt8",
     },
-    // {
-    //   cluster: "Sportiva",
-    //   title: "BasketBall",
-    //   note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
-    //   url_sastra: "#",
-    // },
-    // {
-    //   cluster: "Sportiva",
-    //   title: "Feet and Hand",
-    //   note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
-    //   url_sastra: "#",
-    // },
     {
       cluster: "Access America",
       note: "10:00 a.m. - 1:00 p.m. | Venue: 410",
@@ -58,18 +46,6 @@ const eventData = {
       url_sastra:
         "https://docs.google.com/forms/d/e/1FAIpQLSdifjSaCbN4yjrLOoPQVV_1XGIZM6XifsMbRUdbcghSxz4vTw/viewform?usp=pp_url ",
     },
-    // {
-    //   cluster: "Sportiva",
-    //   note: "10:00 a.m. - 2:00 p.m. | Venue: Ground",
-    //   title: "Musical Chair",
-    //   url_sastra: "#",
-    // },
-    // {
-    //   cluster: "Sportiva",
-    //   note: "10:00 a.m. - 2:00 p.m. | Venue: 203",
-    //   title: "Lucky Corner",
-    //   url_sastra: "#",
-    // },
     {
       cluster: "Mathematica",
       note: "10:00 a.m. - 4:00 p.m. | Venue: 212",
@@ -78,8 +54,8 @@ const eventData = {
     },
     {
       cluster: "Equilibria",
-      note: "11:00 a.m. - 1:00 p.m. | Venue: 208",
-      title: "Naanga Vandha Mattum Podhum",
+      note: "11:00 a.m. - 1:00 p.m. | Venue: 106 & 107",
+      title: "Neenga Vandha Mattum Podhum",
       url_sastra: "https://forms.gle/98eXWWwnR2bgYSc97",
     },
     {
@@ -115,12 +91,6 @@ const eventData = {
       title: "Robo-Saga",
       url_sastra: "https://forms.gle/3N3zva39iWfTzdGt8",
     },
-    // {
-    //   cluster: "Sportiva",
-    //   note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
-    //   title: "Feet and Hand",
-    //   url_sastra: "#",
-    // },
     {
       cluster: "Access America",
       note: "10:00 a.m. - 1:00 p.m. | Venue: 305",
@@ -141,12 +111,6 @@ const eventData = {
       url_sastra:
         "https://docs.google.com/forms/d/e/1FAIpQLSdWnAZUFen29nYJb3qxIv3AUl3fpwmHCk2ldyFI7A2XsK6o0w/viewform?usp=sf_link",
     },
-    // {
-    //   cluster: "Sportiva",
-    //   note: "10:00 a.m. - 3:00 p.m. | Venue: Ground",
-    //   title: "One Over Cricket",
-    //   url_sastra: "#",
-    // },
     {
       cluster: "Mathematica",
       note: "10:00 a.m. - 4:00 p.m. | Venue: 509",
@@ -159,15 +123,9 @@ const eventData = {
       title: "Model Exhibit",
       url_sastra: "https://forms.gle/1NPnVR4fPVc1nRHP8",
     },
-    // {
-    //   cluster: "Sportiva",
-    //   note: "11:00 a.m. - 1:00 p.m. | Venue: Ground",
-    //   title: "Powerlifting",
-    //   url_sastra: "#",
-    // },
     {
       cluster: "Equilibria",
-      note: "11:00 a.m. - 1:30 p.m. | Venue: 208",
+      note: "11:00 a.m. - 1:30 p.m. | Venue: T and P hall (5th floor)",
       title: "Ithu Kalavara Bhoomi",
       url_sastra: "https://forms.gle/p3yX1HCdjHQLhTZZ8",
     },
@@ -179,18 +137,6 @@ const eventData = {
     },
   ],
   3: [
-    // {
-    //   note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
-    //   title: "Football",
-    //   cluster: "Sportiva",
-    //   url_sastra: "#",
-    // },
-    // {
-    //   note: "9:00 a.m. - 5:00 p.m. | Venue: Ground",
-    //   title: "Feet and Hand",
-    //   cluster: "Sportiva",
-    //   url_sastra: "#",
-    // },
     {
       note: "10:00 a.m. - 1:00 p.m. | Venue: 501",
       title: "Roadies",
@@ -230,18 +176,6 @@ const eventData = {
       url_sastra:
         "https://docs.google.com/forms/d/e/1FAIpQLSfhAL3NDZjZ13Ktm38590vUcHRBG0PN2RtqqWqYY6_rBViBCw/viewform?usp=sf_link",
     },
-    // {
-    //   note: "2:00 p.m. - 5:00 p.m. | Venue: Ground",
-    //   title: "Uriadi",
-    //   cluster: "Sportiva",
-    //   url_sastra: "#",
-    // },
-    // {
-    //   note: "3:00 p.m. - 5:00 p.m. | Venue: Ground",
-    //   title: "Tug of War",
-    //   cluster: "Sportiva",
-    //   url_sastra: "#",
-    // },
   ],
 };
 
