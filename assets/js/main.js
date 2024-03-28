@@ -42,7 +42,7 @@ function toggleDropdown() {
 
 /*=============== COUNTDOWN ===============*/
 let x = setInterval(function () {
-  let now = new Date("03/29/2024 00:00:00").getTime();
+  let now = new Date("03/29/2023 00:00:00").getTime();
   let countDown = new Date().getTime();
   let distance = now - countDown;
 
