@@ -19,27 +19,29 @@ Theta-24 is a cutting-edge project aimed at revolutionizing the way we interact 
 To install the project, follow these steps:
 
 1. Clone the repository:
-   `sh
- git clone https://github.com/AbiXnash/Theta-24.git
- `
+   ```sh
+   git clone https://github.com/AbiXnash/Theta-24.git
+   ```
 2. Navigate to the project directory:
-   `sh
- cd Theta-24
- `
+   ```sh
+   cd Theta-24
+   ```
 3. Install dependencies:
-   `sh
- npm install
- `
+   ```sh
+   npm install
+   ```
 
 ## Usage
 
 To use the project, follow these steps:
 
 1. Start the development server:
-   `sh
- npm start
- `
+   ```sh
+   npm start
+   ```
 2. Open your browser and navigate to `http://localhost:3000`.
+
+Please note that this is not the complete website. A few tabs and the countdown are hidden. Change the date in the countdown JavaScript file to view it. To buy the full code, contact at abinashs2704@gmail.com.
 
 ## Contributing
 
