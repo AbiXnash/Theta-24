@@ -1,52 +1,45 @@
-# Project Theta-24
+# Theta-24
 
-## Overview
+The website for **Theta 2k24**, a national-level techno-management fest: a static HTML/SCSS/JavaScript site with
+events and workshops for each cluster, a timeline, the crew, a T-shirt page and contact details.
 
-Theta-24 is a cutting-edge project aimed at revolutionizing the way we interact with technology. This README provides an overview of the project, setup instructions, and usage guidelines.
+> Note: this isn't the complete website. A few tabs and the countdown are hidden. Change the date in the countdown
+> JavaScript (`assets/js/main.js`, currently 29 March 2024) to see it. To buy the full code, contact
+> abinashs2704@gmail.com.
 
-## Table of Contents
+## Pages
 
-- [Project Theta-24](#project-theta-24)
-  - [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
+| Page | What it is |
+|------|------------|
+| `index.html` | Home, with the countdown |
+| `events.html`, `events/*.html` | Events per cluster: Access America, Biogenesis, Electronica, Emulsion, Equilibria, Informatica, Mathematica, Robotics, Strategia |
+| `workshops.html`, `workshops/*.html` | Workshops per cluster (the same clusters plus Optica) |
+| `timeline.html` | Fest timeline |
+| `crew.html` | The team |
+| `tshirt.html` | Fest T-shirt |
+| `contact.html` | Contact |
+| `stay-tuned.html` | Placeholder for pages not yet live |
 
-## Installation
+Styles are in `assets/scss` (compiled to `assets/css`), scripts in `assets/js`, and images in `assets/img`,
+`assets/crew` and `assets/Cluster Logos`. The cursor effect uses [magicmouse.js](https://www.npmjs.com/package/magicmouse.js).
 
-To install the project, follow these steps:
+## Run it
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/AbiXnash/Theta-24.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd Theta-24
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
+```sh
+git clone https://github.com/AbiXnash/Theta-24.git
+cd Theta-24
+npm install
+npm start      # serves the folder with `serve`
+```
 
-## Usage
+Then open the address `serve` prints. Or just open `index.html` in a browser.
 
-To use the project, follow these steps:
-
-1. Start the development server:
-   ```sh
-   npm start
-   ```
-2. Open your browser and navigate to `http://localhost:3000`.
-
-Please note that this is not the complete website. A few tabs and the countdown are hidden. Change the date in the countdown JavaScript file to view it. To buy the full code, contact at abinashs2704@gmail.com.
+`.github/workflows/static.yml` deploys the site to GitHub Pages.
 
 ## Contributing
 
-We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) for more details.
+Please read the [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more information.
+MIT, see [License.md](License.md).
